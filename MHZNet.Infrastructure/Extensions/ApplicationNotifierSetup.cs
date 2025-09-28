@@ -18,13 +18,10 @@ public static class ApplicationNotifierSetup
                 port = app.Configuration["urls"].Split(':').Last();
             }
 
-            ConsoleHelper.WriteLine($"Ó¦ÓÃ³ÌĞòÆô¶¯³É¹¦! {{¶Ë¿ÚºÅ : {port}}}\n" +
-                                    "»¶Ó­Ê¹ÓÃ¡¶ape-volo-admin¡·ÖĞºóÌ¨È¨ÏŞ¹ÜÀíÏµÍ³\n" +
-                                    "¼ÓÈº·½Ê½:Î¢ĞÅºÅ£ºapevolo<±¸×¢'¼ÓÈº'>   QQÈº£º839263566\n" +
-                                    "ÏîÄ¿ÔÚÏßÎÄµµ:http://doc.apevolo.com/\n" +
-                                    $"½Ó¿ÚÎÄµµµØÖ·:http://localhost:{port}/swagger/api/index.html\n" +
-                                    "Ç°¶ËÔËĞĞµØÖ·:http://localhost:8001\n" +
-                                    "Èç¹ûÏîÄ¿ÈÃÄú»ñµÃÁËÊÕÒæ£¬Ï£ÍûÄúÄÜÇë×÷ÕßºÈ±­¿§·È:http://doc.apevolo.com/donate",
+            ConsoleHelper.WriteLine($"åº”ç”¨ç¨‹åºå¯åŠ¨æˆåŠŸ! {{ç«¯å£å· : {port}}}\n" +
+                                    "æ¬¢è¿ä½¿ç”¨ MHZNet ä¼ä¸šçº§åå°ç®¡ç†ç³»ç»Ÿ\n" +
+                                    $"æ¥å£æ–‡æ¡£åœ°å€:http://localhost:{port}/swagger/api/index.html\n" +
+                                    "å‰ç«¯è¿è¡Œåœ°å€:http://localhost:8001\n",
                 ConsoleColor.Green);
         });
     }

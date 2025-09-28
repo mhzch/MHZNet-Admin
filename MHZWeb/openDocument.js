@@ -1,6 +1,6 @@
 var child_process = require('child_process')
 
-var url = 'http://doc.apevolo.com'
+var url = 'https://github.com/mhzch/MHZNet-Admin'
 var cmd = ''
 console.log(process.platform)
 switch (process.platform) {

@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://github.com/xianhc/apevolo-api"
+    href="https://github.com/mhzch/MHZNet-Admin"
     target="_blank"
     class="github-corner"
     aria-label="View source on Github"

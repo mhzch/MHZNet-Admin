@@ -106,7 +106,8 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.Captcha">
             <summary>
-            获取验证�?    /// </summary>
+            获取验证码
+            </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.Login(MHZNet.DTO.Queries.Login.LoginAuthUser)">
@@ -265,33 +266,33 @@
         </member>
         <member name="T:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController">
             <summary>
-            閭欢妯℃澘绠＄悊
+            邮件模板管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Create(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
             <summary>
-            鏂板閭璐︽埛
+            新增邮箱账户
             </summary>
             <param name="createUpdateEmailMessageTemplateDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Update(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
             <summary>
-            鏇存柊閭璐︽埛
+            更新邮箱账户
             </summary>
             <param name="createUpdateEmailMessageTemplateDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎閭璐︽埛
+            删除邮箱账户
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Query(MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            閭璐︽埛鍒楄〃
+            邮箱账户列表
             </summary>
             <param name="messageTemplateQueryCriteria"></param>
             <param name="pagination"></param>
@@ -299,32 +300,32 @@
         </member>
         <member name="T:MHZNet.Api.Controllers.Monitor.AuditingController">
             <summary>
-            瀹¤鏃ュ織绠＄悊
+            审计日志管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Monitor.AuditingController.Query(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            瀹¤鍒楄〃
+            审计列表
             </summary>
-            <param name="logQueryCriteria">鏌ヨ瀵硅薄</param>
-            <param name="pagination">鍒嗛〉瀵硅薄</param>
+            <param name="logQueryCriteria">查询对象</param>
+            <param name="pagination">分页对象</param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Monitor.AuditingController.FindListByCurrent(MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            褰撳墠鐢ㄦ埛琛屼负
+            当前用户行为
             </summary>
             <param name="pagination"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Monitor.ExceptionLogController">
             <summary>
-            寮傚父鏃ュ織绠＄悊
+            异常日志管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Monitor.ExceptionLogController.Query(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ョ湅寮傚父鏃ュ織鍒楄〃
+            查看异常日志列表
             </summary>
             <param name="logQueryCriteria"></param>
             <param name="pagination"></param>
@@ -366,7 +367,7 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.ApisController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto)">
             <summary>
-            新增Api
+            创建Api
             </summary>
             <param name="createUpdateApisDto"></param>
             <returns></returns>
@@ -395,39 +396,39 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.ApisController.RefreshApis">
             <summary>
-            刷新Api列表 只实现了新增的api添加
+            刷新Api列表 只实现增量更新api接口
             </summary>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.DeptController">
             <summary>
-            閮ㄩ棬绠＄悊
+            部门管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
             <summary>
-            鏂板閮ㄩ棬
+            新增部门
             </summary>
             <param name="createUpdateDepartmentDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
             <summary>
-            鏇存柊閮ㄩ棬
+            更新部门
             </summary>
             <param name="createUpdateDepartmentDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎閮ㄩ棬
+            删除部门
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Query(MHZNet.DTO.Queries.Permission.DeptQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ョ湅閮ㄩ棬鍒楄〃
+            查看部门列表
             </summary>
             <param name="deptQueryCriteria"></param>
             <param name="pagination"></param>
@@ -435,46 +436,47 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Download(MHZNet.DTO.Queries.Permission.DeptQueryCriteria)">
             <summary>
-            瀵煎嚭閮ㄩ棬
+            导出部门
             </summary>
             <param name="deptQueryCriteria"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.DeptController.GetSuperior(System.Int64)">
             <summary>
-            鑾峰彇鍚岀骇涓庣埗绾ч儴闂?    /// </summary>
+            获取同级与父级部门
+            </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.JobController">
             <summary>
-            宀椾綅绠＄悊
+            岗位管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
             <summary>
-            鏂板宀椾綅
+            新增岗位
             </summary>
             <param name="createUpdateJobDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
             <summary>
-            鏇存柊宀椾綅
+            更新岗位
             </summary>
             <param name="createUpdateJobDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎宀椾綅
+            删除岗位
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.Query(MHZNet.DTO.Queries.Permission.JobQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ョ湅宀椾綅鍒楄〃
+            查看岗位列表
             </summary>
             <param name="jobQueryCriteria"></param>
             <param name="pagination"></param>
@@ -482,107 +484,111 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.QueryAll">
             <summary>
-            鑾峰彇鎵€鏈夊矖浣?    /// </summary>
+            获取所有岗位
+            </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.JobController.Download(MHZNet.DTO.Queries.Permission.JobQueryCriteria)">
             <summary>
-            瀵煎嚭宀椾綅
+            导出岗位
             </summary>
             <param name="jobQueryCriteria"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.MenusController">
             <summary>
-            鑿滃崟绠＄悊
+            菜单管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
             <summary>
-            鏂板鑿滃崟
+            新增菜单
             </summary>
             <param name="createUpdateMenuDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
             <summary>
-            鏇存柊鑿滃崟
+            更新菜单
             </summary>
             <param name="createUpdateMenuDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎鑿滃崟
+            删除菜单
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Build">
             <summary>
-            鏋勫缓鏍戝舰鑿滃崟
+            构建树形菜单
             </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.GetMenuLazy(System.Int64)">
             <summary>
-            鑾峰彇瀛愯彍鍗?    /// </summary>
-            <param name="pid">鐖剁骇ID</param>
+            获取子菜单
+            </summary>
+            <param name="pid">父级ID</param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Query(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
             <summary>
-            鏌ョ湅鑿滃崟鍒楄〃
+            查看菜单列表
             </summary>
             <param name="menuQueryCriteria"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Download(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
             <summary>
-            瀵煎嚭鑿滃崟
+            导出菜单
             </summary>
             <param name="menuQueryCriteria"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.MenusController.GetSuperior(System.Int64)">
             <summary>
-            鑾峰彇鍚岀骇涓庝笂绾ц彍鍗?    /// </summary>
+            获取同级与上级菜单
+            </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.PermissionsController">
             <summary>
-            瑙掕壊鎺堟潈绠＄悊
+            角色授权管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.QueryAllMenus">
             <summary>
-            鏌ヨ鎵€鏈夎彍鍗?    /// </summary>
+            查询所有菜单
+            </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.QueryAllApis">
             <summary>
-            鏌ヨ鎵€鏈堿pi
+            查询所有Api
             </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.UpdateRolesMenus(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto)">
             <summary>
-            鏇存柊瑙掕壊鑿滃崟鍏宠仈
+            更新角色菜单关联
             </summary>
             <param name="updateRoleMenuDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.UpdateRolesApis(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto)">
             <summary>
-            鏇存柊瑙掕壊Api鍏宠仈
+            更新角色Api关联
             </summary>
             <param name="updateRoleApiDto"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.RoleController">
             <summary>
-            瑙掕壊绠＄悊
+            角色管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.#ctor(MHZNet.IBusiness.Permission.IRoleService)">
@@ -593,35 +599,35 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Create(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
             <summary>
-            娣诲姞瑙掕壊
+            添加角色
             </summary>
             <param name="createUpdateRoleDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Update(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
             <summary>
-            鏇存柊瑙掕壊
+            更新角色
             </summary>
             <param name="createUpdateRoleDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎瑙掕壊
+            删除角色
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.QuerySingle(System.Int64)">
             <summary>
-            鏌ョ湅鍗曚竴瑙掕壊
+            查看单一角色
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Query(MHZNet.DTO.Queries.Permission.RoleQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ョ湅瑙掕壊鍒楄〃
+            查看角色列表
             </summary>
             <param name="roleQueryCriteria"></param>
             <param name="pagination"></param>
@@ -629,39 +635,39 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Download(MHZNet.DTO.Queries.Permission.RoleQueryCriteria)">
             <summary>
-            瀵煎嚭瑙掕壊鍒楄〃
+            导出角色列表
             </summary>
             <param name="roleQueryCriteria"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.QueryAll">
             <summary>
-            鑾峰彇鍏ㄩ儴瑙掕壊
+            获取全部角色
             </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.RoleController.GetRoleLevel(System.Nullable{System.Int32})">
             <summary>
-            鑾峰彇褰撳墠鐢ㄦ埛瑙掕壊绛夌骇
+            获取当前用户角色等级
             </summary>
             <param name="level"></param>
             <returns></returns>
         </member>
         <member name="T:MHZNet.Api.Controllers.Permission.UserController">
             <summary>
-            鐢ㄦ埛绠＄悊
+            用户管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.UserController.Create(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
             <summary>
-            鏂板鐢ㄦ埛
+            新增用户
             </summary>
             <param name="createUpdateUserDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.UserController.Update(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
             <summary>
-            鏇存柊鐢ㄦ埛
+            更新用户
             </summary>
             <param name="createUpdateUserDto"></param>
             <returns></returns>
@@ -669,14 +675,14 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.UserController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎鐢ㄦ埛
+            删除用户
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.UserController.Query(MHZNet.DTO.Queries.Permission.UserQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ョ湅鐢ㄦ埛鍒楄〃
+            查看用户列表
             </summary>
             <param name="userQueryCriteria"></param>
             <param name="pagination"></param>
@@ -684,7 +690,7 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.Permission.UserController.Download(MHZNet.DTO.Queries.Permission.UserQueryCriteria)">
             <summary>
-            瀵煎嚭鐢ㄦ埛鍒楄〃
+            导出用户列表
             </summary>
             <param name="userQueryCriteria"></param>
             <returns></returns>
@@ -841,12 +847,12 @@
         </member>
         <member name="T:MHZNet.Api.Controllers.System.FileRecordController">
             <summary>
-            鏂囦欢瀛樺偍绠＄悊
+            文件存储管理
             </summary>
         </member>
         <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Upload(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto,Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
-            鏂板鏂囦欢
+            新增文件
             </summary>
             <param name="file"></param>
             <param name="createUpdateFileRecordDto"></param>
@@ -854,21 +860,21 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto)">
             <summary>
-            鏇存柊鏂囦欢鎻忚堪
+            更新文件描述
             </summary>
             <param name="createUpdateAppSecretDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
             <summary>
-            鍒犻櫎鏂囦欢
+            删除文件
             </summary>
             <param name="idCollection"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Query(MHZNet.DTO.Queries.System.FileRecordQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鑾峰彇鏂囦欢鍒楄〃
+            获取文件列表
             </summary>
             <param name="fileRecordQueryCriteria"></param>
             <param name="pagination"></param>
@@ -876,7 +882,7 @@
         </member>
         <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Download(MHZNet.DTO.Queries.System.FileRecordQueryCriteria)">
             <summary>
-            瀵煎嚭鏂囦欢璁板綍
+            导出文件记录
             </summary>
             <param name="fileRecordQueryCriteria"></param>
             <returns></returns>

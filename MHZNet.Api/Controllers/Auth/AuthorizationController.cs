@@ -36,7 +36,7 @@ namespace MHZNet.Api.Controllers.Auth;
 [Route("/auth")]
 public class AuthorizationController : BaseApiController
 {
-    #region 构造函�?
+    #region 构造函数
     public AuthorizationController(IUserService userService, IPermissionService permissionService,
         IOnlineUserService onlineUserService, IQueuedEmailService queuedEmailService,
         ITokenService tokenService, ITokenBlacklistService tokenBlacklistService)
@@ -65,7 +65,8 @@ public class AuthorizationController : BaseApiController
     #region 内部接口
 
     /// <summary>
-    /// 获取验证�?    /// </summary>
+    /// 获取验证码
+    /// </summary>
     /// <returns></returns>
     [HttpGet]
     [Description("Action.GetVerificationCode")]

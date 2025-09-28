@@ -29,7 +29,7 @@ public class QuartzNetService : BaseServices<QuartzNet>, IQuartzNetService
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     /// <summary>
     /// 
     /// </summary>

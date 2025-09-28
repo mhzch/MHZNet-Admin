@@ -40,7 +40,7 @@
             :on-error="handleError"
             :action="fileUploadApi +'/upload?description=' + form.description"
           >
-            <div class="apevolo-upload"><i class="el-icon-upload" /> 添加文件</div>
+            <div class="mhznet-upload"><i class="el-icon-upload" /> 添加文件</div>
             <div slot="tip" class="el-upload__tip">请添加文件进行上传,限制最大为100MB</div>
           </el-upload>
         </el-form-item>

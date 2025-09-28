@@ -2,7 +2,7 @@ module.exports = {
   /**
    * @description 网站标题
    */
-  title: 'ApeVolo框架',
+  title: 'MHZNet Admin',
   /**
    * @description 是否显示 tagsView
    */
@@ -30,9 +30,9 @@ module.exports = {
   /**
    * 底部文字，支持html语法
    */
-  footerTxt: '© 2024 <a style="color: #409EFF !important;font-weight: 700 !important;" href="https://github.com/xianhc/ape-volo-web" target="_blank">ApeVoloAdmin</a> Copyright <a style="color: #409EFF !important;font-weight: 700 !important;" href="https://github.com/xianhc" target="_blank">XianHaoChun</a>',
+  footerTxt: '© 2024 <a style="color: #409EFF !important;font-weight: 700 !important;" href="https://github.com/mhzch/MHZNet-Admin" target="_blank">MHZNet Admin</a> Copyright MHZNet Project',
   /**
    * 备案号
    */
-  caseNumber: '粤ICP备2023033756号'
+  caseNumber: '鲁ICP备2024114357号'
 }

@@ -9,7 +9,7 @@
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "Ape.Volo.Api": {
+    "MHZNet.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

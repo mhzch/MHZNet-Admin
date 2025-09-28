@@ -138,7 +138,8 @@ public class SettingService : BaseServices<Setting>, ISettingService
     }
 
     /// <summary>
-    /// 获取设置 �?    /// </summary>
+    /// 获取设置值
+    /// </summary>
     /// <param name="settingName"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>

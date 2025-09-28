@@ -25,7 +25,7 @@ namespace MHZNet.Core.SeedData
     public class SeedService
     {
         /// <summary>
-        /// ³õÊ¼»¯ÏµÍ³Ö÷¿â
+        /// åˆå§‹åŒ–ç³»ç»Ÿæ•°æ®
         /// </summary>
         /// <param name="dataContext"></param>
         /// <param name="isInitData"></param>
@@ -37,29 +37,29 @@ namespace MHZNet.Core.SeedData
         {
             try
             {
-                ConsoleHelper.WriteLine($"³ÌĞòÕıÔÚÆô¶¯....", ConsoleColor.Green);
-                ConsoleHelper.WriteLine($"ÊÇ·ñ¿ª·¢»·¾³: {isQuickDebug}", ConsoleColor.Green);
+                ConsoleHelper.WriteLine($"å¼€å§‹åˆå§‹åŒ–æ•°æ®....", ConsoleColor.Green);
+                ConsoleHelper.WriteLine($"æ˜¯å¦å¼€å‘è°ƒè¯•: {isQuickDebug}", ConsoleColor.Green);
                 ConsoleHelper.WriteLine($"ContentRootPath: {App.WebHostEnvironment.ContentRootPath}");
                 ConsoleHelper.WriteLine($"WebRootPath: {App.WebHostEnvironment.WebRootPath}");
                 ConsoleHelper.WriteLine($"Master Db Id: {dataContext.Db.CurrentConnectionConfig.ConfigId}");
                 ConsoleHelper.WriteLine($"Master Db Type: {dataContext.Db.CurrentConnectionConfig.DbType}");
                 ConsoleHelper.WriteLine(
                     $"Master Db ConnectString: {dataContext.Db.CurrentConnectionConfig.ConnectionString}");
-                ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿â....", ConsoleColor.Green);
+                ConsoleHelper.WriteLine("å¼€å§‹åˆ›å»ºæ•°æ®åº“....", ConsoleColor.Green);
                 if (dataContext.DbType != DbType.Oracle)
                 {
                     dataContext.Db.DbMaintenance.CreateDatabase();
                 }
                 else
                 {
-                    //ÒÑÓĞ¿âµÃÇé¿öÏÂ °ÑÅ×Òì³£´úÂë×¢ÊÍµô
-                    throw new Exception("²»Ö§³ÖOracleÊ¹ÓÃ´úÂë½¨¿â,ÇëÏÈ½¨¿âºó×¢ÊÍ¸Ã´úÂëÖØĞÂÆô¶¯£¡");
+                    //å¯èƒ½æœ‰é—®é¢˜ï¼Œå¦‚æœ‰å¼‚å¸¸è¯·æ³¨é‡Šæ‰
+                    throw new Exception("ä¸æ”¯æŒOracleä½¿ç”¨ä»£ç å»ºåº“,è¯·å…ˆå»ºåº“æ³¨é‡Šè¯¥ä»£ç é‡æ–°è¿è¡Œ");
                 }
 
-                ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿â³É¹¦¡£", ConsoleColor.Green);
-                ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿âÊı¾İ±í....");
+                ConsoleHelper.WriteLine("å¼€å§‹åˆ›å»ºæ•°æ®åº“æˆåŠŸï¼", ConsoleColor.Green);
+                ConsoleHelper.WriteLine("å¼€å§‹åˆå§‹åŒ–æ•°æ®è¡¨....");
 
-                #region ³õÊ¼»¯Ö÷¿âÊı¾İ±í
+                #region åˆå§‹åŒ–ä¸»æ•°æ®è¡¨
 
                 var entityList = GlobalType.EntityTypes
                     .Where(x => x.GetCustomAttribute<SugarTable>() != null &&
@@ -68,7 +68,7 @@ namespace MHZNet.Core.SeedData
                                 x.GetCustomAttribute<MultiDbTenantAttribute>() == null).ToList();
                 if (tenantOptions.Enabled && tenantOptions.Type == TenantType.Id)
                 {
-                    //¶à×â»§¿ªÆôÇÒÊ¹ÓÃID¸ôÀëÄ£Ê½
+                    //å¤šç§Ÿæˆ·å¹¶ä¸”ä½¿ç”¨IDéš”ç¦»æ¨¡å¼
                     entityList.AddRange(GlobalType.EntityTypes
                         .Where(x => x.GetCustomAttribute<SugarTable>() != null &&
                                     x.GetInterfaces().Contains(typeof(ITenantEntity))));
@@ -94,20 +94,20 @@ namespace MHZNet.Core.SeedData
                         }
 
                         ConsoleHelper.WriteLine(
-                            $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->´´½¨Íê³É£¡");
+                            $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->åˆ›å»ºå®Œæˆï¼");
                     }
                 });
 
-                ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿âÊı¾İ±í³É¹¦£¡", ConsoleColor.Green);
+                ConsoleHelper.WriteLine("å¼€å§‹åˆå§‹åŒ–æ•°æ®è¡¨æˆåŠŸï¼", ConsoleColor.Green);
                 ConsoleHelper.WriteLine();
 
                 #endregion
 
-                #region ³õÊ¼»¯Ö÷¿âÊı¾İ
+                #region åˆå§‹åŒ–ç§å­æ•°æ®
 
                 if (isInitData)
                 {
-                    ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿âÖÖ×ÓÊı¾İ....");
+                    ConsoleHelper.WriteLine("å¼€å§‹åˆå§‹åŒ–ç§å­æ•°æ®....");
                     JsonSerializerSettings setting = new JsonSerializerSettings();
                     JsonConvert.DefaultSettings = () =>
                     {
@@ -120,7 +120,7 @@ namespace MHZNet.Core.SeedData
                     string seedDataFolder = "resources/db/{0}.tsv";
                     seedDataFolder = Path.Combine(App.WebHostEnvironment.WebRootPath, seedDataFolder);
 
-                    #region ÓÃ»§
+                    #region ç”¨æˆ·
 
                     if (!await dataContext.Db.Queryable<User>().AnyAsync())
                     {
@@ -132,14 +132,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(User)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(User)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ½ÇÉ«
+                    #region è§’è‰²
 
                     if (!await dataContext.Db.Queryable<Role>().AnyAsync())
                     {
@@ -151,14 +151,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Role)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Role)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ²Ëµ¥
+                    #region èœå•
 
                     if (!await dataContext.Db.Queryable<Menu>().AnyAsync())
                     {
@@ -170,14 +170,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Menu)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Menu)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ²¿ÃÅ
+                    #region éƒ¨é—¨
 
                     if (!await dataContext.Db.Queryable<Department>().AnyAsync())
                     {
@@ -189,14 +189,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Department)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Department)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ¸ÚÎ»
+                    #region å²—ä½
 
                     if (!await dataContext.Db.Queryable<Job>().AnyAsync())
                     {
@@ -208,14 +208,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Job)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Job)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ÏµÍ³È«¾ÖÉèÖÃ
+                    #region ç³»ç»Ÿå…¨å±€è®¾ç½®
 
                     if (!await dataContext.Db.Queryable<Setting>().AnyAsync())
                     {
@@ -227,14 +227,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Setting)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Setting)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ×Öµä
+                    #region å­—å…¸
 
                     if (!await dataContext.Db.Queryable<Dict>().AnyAsync())
                     {
@@ -246,14 +246,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Dict)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Dict)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ×ÖµäÏêÇé
+                    #region å­—å…¸è¯¦æƒ…
 
                     if (!await dataContext.Db.Queryable<DictDetail>().AnyAsync())
                     {
@@ -265,14 +265,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(DictDetail)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(DictDetail)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ×÷Òµµ÷¶È
+                    #region ä½œä¸šè°ƒåº¦
 
                     if (!await dataContext.Db.Queryable<QuartzNet>().AnyAsync())
                     {
@@ -284,14 +284,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(QuartzNet)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(QuartzNet)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ÓÊÏäÕË»§
+                    #region é‚®ä»¶è´¦æˆ·
 
                     if (!await dataContext.Db.Queryable<EmailAccount>().AnyAsync())
                     {
@@ -303,14 +303,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(EmailAccount)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(EmailAccount)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ÓÊ¼şÄ£°å
+                    #region é‚®ä»¶æ¨¡æ¿
 
                     if (!await dataContext.Db.Queryable<EmailMessageTemplate>().AnyAsync())
                     {
@@ -322,14 +322,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(EmailMessageTemplate)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(EmailMessageTemplate)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ÓÃ»§Óë½ÇÉ«
+                    #region ç”¨æˆ·ä¸è§’è‰²
 
                     if (!await dataContext.Db.Queryable<UserRole>().AnyAsync())
                     {
@@ -341,14 +341,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(UserRole)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(UserRole)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ÓÃ»§Óë¸ÚÎ»
+                    #region ç”¨æˆ·ä¸å²—ä½
 
                     if (!await dataContext.Db.Queryable<UserJob>().AnyAsync())
                     {
@@ -360,14 +360,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(UserJob)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(UserJob)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ½ÇÉ«Óë²Ëµ¥
+                    #region è§’è‰²ä¸èœå•
 
                     if (!await dataContext.Db.Queryable<RoleMenu>().AnyAsync())
                     {
@@ -379,7 +379,7 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(RoleMenu)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(RoleMenu)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
@@ -398,14 +398,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Apis)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Apis)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ½ÇÉ«ÓëApis
+                    #region è§’è‰²ä¸Apis
 
                     if (!await dataContext.Db.Queryable<RoleApis>().AnyAsync())
                     {
@@ -417,14 +417,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(RoleApis)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(RoleApis)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    #region ×â»§
+                    #region ç§Ÿæˆ·
 
                     if (!await dataContext.Db.Queryable<Tenant>().AnyAsync())
                     {
@@ -436,14 +436,14 @@ namespace MHZNet.Core.SeedData
                                     FileHelper.ReadFile(string.Format(seedDataFolder, attr.TableName), Encoding.UTF8),
                                     setting));
                             ConsoleHelper.WriteLine(
-                                $"Entity:{nameof(Tenant)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->³õÊ¼Êı¾İ³É¹¦£¡",
+                                $"Entity:{nameof(Tenant)}-->Table:{attr.TableName}-->Desc:{attr.TableDescription}-->åˆå§‹åŒ–æ•°æ®æˆåŠŸï¼",
                                 ConsoleColor.Green);
                         }
                     }
 
                     #endregion
 
-                    ConsoleHelper.WriteLine("³õÊ¼»¯Ö÷¿âÊı¾İÍê³É£¡", ConsoleColor.Green);
+                    ConsoleHelper.WriteLine("åˆå§‹åŒ–ç§å­æ•°æ®å®Œæˆï¼", ConsoleColor.Green);
                     ConsoleHelper.WriteLine();
                 }
 
@@ -457,7 +457,7 @@ namespace MHZNet.Core.SeedData
 
 
         /// <summary>
-        /// ³õÊ¼»¯ÈÕÖ¾¿â
+        /// åˆå§‹åŒ–æ—¥å¿—æ•°æ®åº“
         /// </summary>
         /// <param name="dataContext"></param>
         /// <param name="logDataBase"></param>
@@ -466,10 +466,10 @@ namespace MHZNet.Core.SeedData
         {
             if (!dataContext.Db.IsAnyConnection(logDataBase))
             {
-                throw new ApplicationException("Î´ÅäÖÃÈÕÖ¾Êı¾İ¿â£¬ÇëÔÚappsettings.jsonÖĞDataConnection½ÚµãÖĞÅäÖÃ");
+                throw new ApplicationException("æœªé…ç½®æ—¥å¿—æ•°æ®åº“ï¼Œè¯·æ£€æŸ¥appsettings.jsonä¸­DataConnectionèŠ‚ç‚¹é…ç½®");
             }
 
-            ConsoleHelper.WriteLine("³õÊ¼»¯ÈÕÖ¾Êı¾İ¿â....£¡", ConsoleColor.Green);
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–æ—¥å¿—æ•°æ®åº“....", ConsoleColor.Green);
 
             var logDb = dataContext.Db.GetConnectionScope(logDataBase);
             ConsoleHelper.WriteLine($"Log Db Id: {logDb.CurrentConnectionConfig.ConfigId}");
@@ -482,12 +482,12 @@ namespace MHZNet.Core.SeedData
             }
             else
             {
-                //ÒÑÓĞ¿âµÃÇé¿öÏÂ °ÑÅ×Òì³£´úÂë×¢ÊÍµô
-                throw new Exception("sqlSugar²»Ö§³ÖOracleÊ¹ÓÃ´úÂë½¨¿â,ÇëÏÈ½¨¿âºó×¢ÊÍ¸Ã´úÂëÖØĞÂÆô¶¯£¡");
+                //ï¿½ï¿½ï¿½Ğ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½×¢ï¿½Íµï¿½
+                throw new Exception("sqlSugarä¸æ”¯æŒOracleä½¿ç”¨ä»£ç å»ºåº“,è¯·å…ˆå»ºåº“æ³¨é‡Šè¯¥ä»£ç é‡æ–°è¿è¡Œ");
             }
 
-            ConsoleHelper.WriteLine("³õÊ¼»¯ÈÕÖ¾¿â³É¹¦¡£", ConsoleColor.Green);
-            ConsoleHelper.WriteLine("³õÊ¼»¯ÈÕÖ¾¿âÊı¾İ±í....");
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–æ—¥å¿—æ•°æ®åº“æˆåŠŸï¼", ConsoleColor.Green);
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–æ—¥å¿—æ•°æ®è¡¨....");
 
             var logEntityList = GlobalType.EntityTypes
                 .Where(x => x.GetCustomAttribute<SugarTable>() != null &&
@@ -519,17 +519,17 @@ namespace MHZNet.Core.SeedData
                     }
 
                     ConsoleHelper.WriteLine(
-                        $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->´´½¨Íê³É£¡");
+                        $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->åˆ›å»ºå®Œæˆï¼");
                 }
             });
-            ConsoleHelper.WriteLine("³õÊ¼»¯ÈÕÖ¾¿âÊı¾İ±í³É¹¦£¡", ConsoleColor.Green);
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–æ—¥å¿—æ•°æ®è¡¨æˆåŠŸï¼", ConsoleColor.Green);
             ConsoleHelper.WriteLine();
             return Task.FromResult(Task.CompletedTask);
         }
 
 
         /// <summary>
-        /// ³õÊ¼»¯×â»§¿â
+        /// åˆå§‹åŒ–ç§Ÿæˆ·æ•°æ®åº“
         /// </summary>
         /// <param name="dataContext"></param>
         /// <exception cref="Exception"></exception>
@@ -542,7 +542,7 @@ namespace MHZNet.Core.SeedData
                 return;
             }
 
-            ConsoleHelper.WriteLine("³õÊ¼»¯×â»§Êı¾İ¿â....£¡", ConsoleColor.Green);
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–ç§Ÿæˆ·æ•°æ®åº“....", ConsoleColor.Green);
             foreach (var tenant in tenants)
             {
                 var iTenant = dataContext.Db.AsTenant();
@@ -563,15 +563,15 @@ namespace MHZNet.Core.SeedData
                 }
                 else
                 {
-                    //ÒÑÓĞ¿âµÃÇé¿öÏÂ °ÑÅ×Òì³£´úÂë×¢ÊÍµô
-                    throw new Exception("sqlSugar²»Ö§³ÖOracleÊ¹ÓÃ´úÂë½¨¿â,ÇëÏÈ½¨¿âºó×¢ÊÍ¸Ã´úÂëÖØĞÂÆô¶¯£¡");
+                    //ï¿½ï¿½ï¿½Ğ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½×¢ï¿½Íµï¿½
+                    throw new Exception("sqlSugarä¸æ”¯æŒOracleä½¿ç”¨ä»£ç å»ºåº“,è¯·å…ˆå»ºåº“æ³¨é‡Šè¯¥ä»£ç é‡æ–°è¿è¡Œ");
                 }
 
                 ConsoleHelper.WriteLine($"Tenant Db Id: {tenant.ConfigId}");
                 ConsoleHelper.WriteLine($"Tenant Db Type: {tenant.DbType}");
                 ConsoleHelper.WriteLine($"Tenant Db ConnectString: {tenant.ConnectionString}");
-                ConsoleHelper.WriteLine($"³õÊ¼»¯×â»§{tenant.Name}¿â³É¹¦¡£", ConsoleColor.Green);
-                ConsoleHelper.WriteLine($"³õÊ¼»¯×â»§{tenant.Name}Êı¾İ±í....");
+                ConsoleHelper.WriteLine($"åˆå§‹åŒ–ç§Ÿæˆ·{tenant.Name}æˆåŠŸï¼", ConsoleColor.Green);
+                ConsoleHelper.WriteLine($"åˆå§‹åŒ–ç§Ÿæˆ·{tenant.Name}æ•°æ®è¡¨....");
 
                 var entityList = GlobalType.EntityTypes
                     .Where(x => x.GetCustomAttribute<SugarTable>() != null &&
@@ -601,12 +601,12 @@ namespace MHZNet.Core.SeedData
                         }
 
                         ConsoleHelper.WriteLine(
-                            $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->´´½¨Íê³É£¡");
+                            $"Entity:{entity.Name}-->Table:{entityInfo.DbTableName}-->Desc:{entityInfo.TableDescription}-->åˆ›å»ºå®Œæˆï¼");
                     }
                 });
             }
 
-            ConsoleHelper.WriteLine("³õÊ¼»¯×â»§¿âÍê³É£¡", ConsoleColor.Green);
+            ConsoleHelper.WriteLine("åˆå§‹åŒ–ç§Ÿæˆ·æ•°æ®å®Œæˆï¼", ConsoleColor.Green);
         }
     }
 }

@@ -29,7 +29,7 @@ public class MenusController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public MenusController(IMenuService menuService)
     {
         _menuService = menuService;
@@ -119,7 +119,8 @@ public class MenusController : BaseApiController
     }
 
     /// <summary>
-    /// 获取子菜�?    /// </summary>
+    /// 获取子菜单
+    /// </summary>
     /// <param name="pid">父级ID</param>
     /// <returns></returns>
     [HttpGet]
@@ -173,7 +174,8 @@ public class MenusController : BaseApiController
     }
 
     /// <summary>
-    /// 获取同级与上级菜�?    /// </summary>
+    /// 获取同级与上级菜单
+    /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
     [HttpGet]

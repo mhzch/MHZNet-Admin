@@ -33,7 +33,7 @@ public class QueuedEmailService : BaseServices<QueuedEmail>, IQueuedEmailService
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     /// <summary>
     /// 
     /// </summary>
@@ -158,7 +158,8 @@ public class QueuedEmailService : BaseServices<QueuedEmail>, IQueuedEmailService
     #region 扩展方法
 
     /// <summary>
-    /// 变更邮箱验证�?    /// </summary>
+    /// 变更邮箱验证码
+    /// </summary>
     /// <param name="emailAddress"></param>
     /// <param name="messageTemplateName"></param>
     /// <returns></returns>
@@ -225,7 +226,7 @@ public class QueuedEmailService : BaseServices<QueuedEmail>, IQueuedEmailService
                 {
                     queuedEmail.SendTime = DateTime.Now;
                 }
-                // 如果开启redis并且开启消息队列功�?可以使用下面方式
+                // 如果开启redis并且开启消息队列功能，可以使用下面方式
                 // await App.Cache.GetDatabase()
                 //     .ListLeftPushAsync(MqTopicNameKey.MailboxQueue, queuedEmail.Id.ToString());
             }
@@ -251,7 +252,8 @@ public class QueuedEmailService : BaseServices<QueuedEmail>, IQueuedEmailService
     }
 
     /// <summary>
-    /// 查询 发送邮�?    /// </summary>
+    /// 查询 发送邮件
+    /// </summary>
     /// <param name="queuedEmailQueryCriteria"></param>
     /// <returns></returns>
     public Task<List<QueuedEmail>> QueryToSendMailAsync(QueuedEmailQueryCriteria queuedEmailQueryCriteria)

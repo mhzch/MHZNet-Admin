@@ -4,30 +4,6 @@
         <name>MHZNet.Common</name>
     </assembly>
     <members>
-        <member name="T:MHZNet.Common.Attributes.ApeVoloAuthorizeAttribute">
-            <summary>
-            自定义鉴权特性
-            </summary>
-        </member>
-        <member name="P:MHZNet.Common.Attributes.ApeVoloAuthorizeAttribute.Roles">
-            <summary>
-            角色代码
-            </summary>
-        </member>
-        <member name="T:MHZNet.Common.Attributes.ApeVoloOnlineAttribute">
-            <summary>
-            自定义鉴权特性，在线则可通行
-            </summary>
-        </member>
-        <member name="T:MHZNet.Common.Attributes.ApeVoloRequiredAttribute">
-            <summary>
-            鑷畾涔夋牎楠岀壒鎬?/// </summary>
-        </member>
-        <member name="P:MHZNet.Common.Attributes.ApeVoloRequiredAttribute.Message">
-            <summary>
-            楠岃瘉澶辫触璇存槑鍐呭
-            </summary>
-        </member>
         <member name="T:MHZNet.Common.Attributes.AtLeastOneItemAttribute">
             <summary>
             集合必须至少包含一个项目。
@@ -61,6 +37,30 @@
         <member name="T:MHZNet.Common.Attributes.LogDataBaseAttribute">
             <summary>
             日志库
+            </summary>
+        </member>
+        <member name="T:MHZNet.Common.Attributes.MHZNetAuthorizeAttribute">
+            <summary>
+            �Զ����Ȩ����
+            </summary>
+        </member>
+        <member name="P:MHZNet.Common.Attributes.MHZNetAuthorizeAttribute.Roles">
+            <summary>
+            ��ɫ����
+            </summary>
+        </member>
+        <member name="T:MHZNet.Common.Attributes.MHZNetOnlineAttribute">
+            <summary>
+            自定义鉴权特性，在线则可通行
+            </summary>
+        </member>
+        <member name="T:MHZNet.Common.Attributes.MHZNetRequiredAttribute">
+            <summary>
+            自定义校验特�?/// </summary>
+        </member>
+        <member name="P:MHZNet.Common.Attributes.MHZNetRequiredAttribute.Message">
+            <summary>
+            验证失败说明内容
             </summary>
         </member>
         <member name="T:MHZNet.Common.Attributes.MultiDbTenantAttribute">
@@ -1848,7 +1848,8 @@
         </member>
         <member name="T:MHZNet.Common.Global.GlobalType">
             <summary>
-            绋嬪簭闆嗙被鍨?/// </summary>
+            程序集类型
+            </summary>
         </member>
         <member name="T:MHZNet.Common.Global.LanguageKeyConstants">
             <summary>
@@ -2012,25 +2013,26 @@
         </member>
         <member name="M:MHZNet.Common.Helper.CmdHelper.Run(System.String,System.String)">
             <summary>  
-            Windows鎿嶄綔绯荤粺锛屾墽琛宑md鍛戒护
-            澶氬懡浠よ浣跨敤鎵瑰鐞嗗懡浠よ繛鎺ョ锛? 
+            Windows操作系统，执行cmd命令
+            多命令请使用批处理命令连接符： 
             <![CDATA[  
-            &:鍚屾椂鎵ц涓や釜鍛戒护  
-            |:灏嗕笂涓€涓懡浠ょ殑杈撳嚭,浣滀负涓嬩竴涓懡浠ょ殑杈撳叆  
-            &&锛氬綋&&鍓嶇殑鍛戒护鎴愬姛鏃?鎵嶆墽琛?&鍚庣殑鍛戒护  
-            ||锛氬綋||鍓嶇殑鍛戒护澶辫触鏃?鎵嶆墽琛寍|鍚庣殑鍛戒护
+            &:同时执行两个命令  
+            |:将上一个命令的输出,作为下一个命令的输入  
+            &&：当&&前的命令成功时才执行&&后的命令  
+            ||：当||前的命令失败时才执行||后的命令
             ]]>
             </summary>  
         </member>
         <member name="M:MHZNet.Common.Helper.CmdHelper.Shell(System.String)">
             <summary>
-            Linux鎿嶄綔绯荤粺锛屾墽琛孲hell
-            銆?using https://github.com/phil-harmoniq/Shell.NET 銆?    /// </summary>
+            Linux操作系统，执行Shell
+            参考using https://github.com/phil-harmoniq/Shell.NET 实现
+            </summary>
             <param name="cmd"></param>
         </member>
         <member name="T:MHZNet.Common.Helper.CmdHelper.BashResult">
             <summary>
-            杩斿洖缁撴灉
+            返回结果
             </summary>
         </member>
         <member name="P:MHZNet.Common.Helper.CmdHelper.BashResult.Output">
@@ -2051,7 +2053,7 @@
         </member>
         <member name="T:MHZNet.Common.Helper.CmdHelper.Bash">
             <summary>
-            鎵ц
+            执行
             </summary>
         </member>
         <member name="P:MHZNet.Common.Helper.CmdHelper.Bash.Native">

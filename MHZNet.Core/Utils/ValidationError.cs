@@ -9,7 +9,7 @@ namespace MHZNet.Core.Utils;
 public static class ValidationError
 {
     /// <summary>
-    /// 数据已存�?
+    /// 数据已存在
     /// </summary>
     /// <param name="instance">类型</param>
     /// <param name="propertyName">属性名</param>
@@ -24,10 +24,10 @@ public static class ValidationError
             throw new ArgumentException($"属性'{propertyName}' 在类型'{typeof(T).Name}' 中不存在。");
         }
 
-        // 获取属性�?
+        // 获取属性值
         var value = property.GetValue(instance);
 
-        // 获取 Display 特�?
+        // 获取 Display 特性
         var display = property.GetCustomAttribute<DisplayAttribute>();
         var displayName = display == null ? property.Name : display.Name;
 
@@ -36,7 +36,7 @@ public static class ValidationError
     }
 
     /// <summary>
-    /// 数据不存�?
+    /// 数据不存在
     /// </summary>
     /// <returns></returns>
     public static string NotExist()
@@ -46,10 +46,10 @@ public static class ValidationError
     }
 
     /// <summary>
-    /// 数据不存�?
+    /// 数据不存在
     /// </summary>
     /// <param name="instance">类型</param>
-    /// <param name="displayName">占位�?/param>
+    /// <param name="displayName">占位符</param>
     /// <param name="propertyName">属性名</param>
     /// <returns></returns>
     public static string NotExist<T>(T instance, string displayName, string propertyName)
@@ -62,10 +62,10 @@ public static class ValidationError
             throw new ArgumentException($"属性'{propertyName}' 在类型'{typeof(T).Name}' 中不存在。");
         }
 
-        // 获取属性�?
+        // 获取属性值
         var value = property.GetValue(instance);
 
-        // 获取 Display 特�?
+        // 获取 Display 特性
         // var display = property.GetCustomAttribute<DisplayAttribute>();
         // var displayName = display == null ? property.Name : display.Name;
 
@@ -84,7 +84,7 @@ public static class ValidationError
     }
 
     /// <summary>
-    /// 必填�?
+    /// 必填项
     /// </summary>
     /// <param name="instance"></param>
     /// <param name="propertyName"></param>
@@ -101,7 +101,7 @@ public static class ValidationError
             throw new ArgumentException($"属性'{propertyName}' 在类型'{typeof(T).Name}' 中不存在。");
         }
 
-        // 获取 Display 特�?
+        // 获取 Display 特性
         var display = property.GetCustomAttribute<DisplayAttribute>();
         var displayName = display == null ? property.Name : display.Name;
 

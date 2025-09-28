@@ -1,8 +1,8 @@
 {
-  "name": "apevolo-web",
+  "name": "mhznet-web",
   "version": "1.0.0",
-  "description": "ApeVolo 前端源码",
-  "author": "Ape Volo",
+  "description": "MHZNet 前端源码",
+  "author": "MHZNet Team",
   "license": "Apache-2.0",
   "scripts": {
     "serve": "node openDocument.js && vue-cli-service serve --open",
@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xianhc/apevolo-api.git"
+    "url": "https://github.com/mhzch/MHZNet-Admin.git"
   },
   "bugs": {
-    "url": "https://github.com/xianhc/apevolo-api/issues"
+    "url": "https://github.com/mhzch/MHZNet-Admin/issues"
   },
   "dependencies": {
     "@riophae/vue-treeselect": "0.4.0",

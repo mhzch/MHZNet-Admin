@@ -7,20 +7,23 @@ using System.Reflection;
 namespace MHZNet.Common.Global;
 
 /// <summary>
-/// 程序集类�?/// </summary>
+/// 程序集类型
+/// </summary>
 public static class GlobalType
 {
-    public const string ApiAssembly = "Ape.Volo.Api";
-    public const string CoreAssembly = "Ape.Volo.Core";
-    public const string CommonAssembly = "Ape.Volo.Common";
-    public const string IBusinessAssembly = "Ape.Volo.IBusiness";
-    public const string BusinessAssembly = "Ape.Volo.Business";
-    public const string RepositoryAssembly = "Ape.Volo.Repository";
-    public const string TaskServiceAssembly = "Ape.Volo.TaskService";
-    public const string EntityAssembly = "Ape.Volo.Entity";
-    public const string SharedModelAssembly = "Ape.Volo.SharedModel";
-    public const string ViewModelAssembly = "Ape.Volo.ViewModel";
-    public const string EventBusAssembly = "Ape.Volo.EventBus";
+    public const string ApiAssembly = "MHZNet.Api";
+    public const string CoreAssembly = "MHZNet.Core";
+    public const string CommonAssembly = "MHZNet.Common";
+    public const string IBusinessAssembly = "MHZNet.IBusiness";
+    public const string BusinessAssembly = "MHZNet.Business";
+    public const string RepositoryAssembly = "MHZNet.Repository";
+    public const string TaskServiceAssembly = "MHZNet.TaskService";
+    public const string POAssembly = "MHZNet.PO";
+    // 注释掉不存在的程序集
+    // public const string EntityAssembly = "MHZNet.Entity";
+    // public const string SharedModelAssembly = "MHZNet.SharedModel";
+    // public const string ViewModelAssembly = "MHZNet.ViewModel";
+    public const string EventBusAssembly = "MHZNet.EventBus";
 
     public static readonly List<Type> ApiTypes;
     public static readonly List<Type> CoreTypes;
@@ -29,9 +32,11 @@ public static class GlobalType
     public static readonly List<Type> BusinessTypes;
     public static readonly List<Type> RepositoryTypes;
     public static readonly List<Type> TaskServiceTypes;
+    public static readonly List<Type> POTypes;
     public static readonly List<Type> EntityTypes;
-    public static readonly List<Type> SharedModelTypes;
-    public static readonly List<Type> ViewModelTypes;
+    // 注释掉不存在的程序集类型
+    // public static readonly List<Type> SharedModelTypes;
+    // public static readonly List<Type> ViewModelTypes;
     public static readonly List<Type> EventBusTypes;
 
     static GlobalType()
@@ -43,9 +48,11 @@ public static class GlobalType
         BusinessTypes = LoadAssemblyTypes(BusinessAssembly);
         RepositoryTypes = LoadAssemblyTypes(RepositoryAssembly);
         TaskServiceTypes = LoadAssemblyTypes(TaskServiceAssembly);
-        EntityTypes = LoadAssemblyTypes(EntityAssembly);
-        SharedModelTypes = LoadAssemblyTypes(SharedModelAssembly);
-        ViewModelTypes = LoadAssemblyTypes(ViewModelAssembly);
+        POTypes = LoadAssemblyTypes(POAssembly);
+        EntityTypes = POTypes; // 使用PO程序集中的类型作为实体类型
+        // 注释掉不存在的程序集初始化
+        // SharedModelTypes = LoadAssemblyTypes(SharedModelAssembly);
+        // ViewModelTypes = LoadAssemblyTypes(ViewModelAssembly);
         EventBusTypes = LoadAssemblyTypes(EventBusAssembly);
     }
 
@@ -61,7 +68,7 @@ public static class GlobalType
         var dllFile = Path.Combine(basePath, dllName);
         if (!File.Exists(dllFile))
         {
-            throw new System.Exception($"{dllName} 文件未生�? 编译项目成功后重试！");
+            throw new System.Exception($"{dllName} 文件未生成，编译项目成功后重试！");
         }
 
         return Assembly.LoadFrom(dllFile);

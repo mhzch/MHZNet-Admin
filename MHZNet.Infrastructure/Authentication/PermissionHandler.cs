@@ -14,7 +14,8 @@ using Shyjus.BrowserDetection;
 namespace MHZNet.Infrastructure.Authentication;
 
 /// <summary>
-/// 权限授权处理�?/// </summary>
+/// 权限授权处理器
+/// </summary>
 public class PermissionHandler : AuthorizationHandler<PermissionRequirement>
 {
     /// <summary>
@@ -31,7 +32,8 @@ public class PermissionHandler : AuthorizationHandler<PermissionRequirement>
     private readonly ITokenBlacklistService _tokenBlacklistService;
 
     /// <summary>
-    /// 构造函�?    /// </summary>
+    /// 构造函数
+    /// </summary>
     /// <param name="schemes"></param>
     /// <param name="httpContextAccessor"></param>
     /// <param name="permissionService"></param>
@@ -198,7 +200,7 @@ public class PermissionHandler : AuthorizationHandler<PermissionRequirement>
                     /*
                     try
                     {
-                        //在线特性，接口拥有ApeVoloOnlineAttribute 直接放行
+                        //在线特性，接口拥有MHZNetOnlineAttribute 直接放行
                         if (context.Resource.IsNotNull())
                         {
                             var endpointFeature = (IEndpointFeature)((DefaultHttpContext)context.Resource)
@@ -206,11 +208,11 @@ public class PermissionHandler : AuthorizationHandler<PermissionRequirement>
                                     x.Key.FullName == typeof(IEndpointFeature).FullName).Value;
                             if (endpointFeature != null)
                             {
-                                var apeVoloOnline =
+                                var mhzNetOnline =
                                     endpointFeature.Endpoint?.Metadata.FirstOrDefault(x =>
-                                            x.GetType() == typeof(ApeVoloOnlineAttribute)) as
-                                        ApeVoloOnlineAttribute;
-                                if (apeVoloOnline.IsNotNull())
+                                            x.GetType() == typeof(MHZNetOnlineAttribute)) as
+                                        MHZNetOnlineAttribute;
+                                if (mhzNetOnline.IsNotNull())
                                 {
                                     context.Succeed(requirement);
                                     return;
@@ -254,13 +256,13 @@ public class PermissionHandler : AuthorizationHandler<PermissionRequirement>
                                 var endpointFeature = (IEndpointFeature)((DefaultHttpContext)context.Resource)
                                     .Features.FirstOrDefault(x =>
                                         x.Key.FullName == typeof(IEndpointFeature).FullName).Value;
-                                var apeVoloAuthorize =
+                                var mhzNetAuthorize =
                                     endpointFeature.Endpoint?.Metadata.FirstOrDefault(x =>
-                                        x.GetType() == typeof(ApeVoloAuthorizeAttribute)) as ApeVoloAuthorizeAttribute;
+                                        x.GetType() == typeof(MHZNetAuthorizeAttribute)) as MHZNetAuthorizeAttribute;
                                 // .net core 3.1获取的方法
-                                //ApeVoloAuthorizeAttribute apeVoloAuthorize = ((Endpoint)context.Resource).Metadata.FirstOrDefault(x => x.GetType() == typeof(ApeVoloAuthorizeAttribute)) as ApeVoloAuthorizeAttribute;
+                                //MHZNetAuthorizeAttribute mhzNetAuthorize = ((Endpoint)context.Resource).Metadata.FirstOrDefault(x => x.GetType() == typeof(MHZNetAuthorizeAttribute)) as MHZNetAuthorizeAttribute;
 
-                                if (apeVoloAuthorize != null && apeVoloAuthorize.Roles.Any(role =>
+                                if (mhzNetAuthorize != null && mhzNetAuthorize.Roles.Any(role =>
                                         permissionRoles.Contains(role)))
                                 {
                                     isMatchRole = true;

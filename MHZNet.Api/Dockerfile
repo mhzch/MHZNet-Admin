@@ -6,30 +6,30 @@ EXPOSE 8002
 # 使用官方 .NET SDK 镜像作为构建镜像
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["Ape.Volo.Api/Ape.Volo.Api.csproj", "Ape.Volo.Api/"]
-COPY ["Ape.Volo.Business/Ape.Volo.Business.csproj", "Ape.Volo.Business/"]
-COPY ["Ape.Volo.Common/Ape.Volo.Common.csproj", "Ape.Volo.Common/"]
-COPY ["Ape.Volo.Core/Ape.Volo.Core.csproj", "Ape.Volo.Core/"]
-COPY ["Ape.Volo.Entity/Ape.Volo.Entity.csproj", "Ape.Volo.Entity/"]
-COPY ["Ape.Volo.EventBus/Ape.Volo.EventBus.csproj", "Ape.Volo.EventBus/"]
-COPY ["Ape.Volo.IBusiness/Ape.Volo.IBusiness.csproj", "Ape.Volo.IBusiness/"]
-COPY ["Ape.Volo.Infrastructure/.Ape.Volo.Infrastructure.csproj", "Ape.Volo.Infrastructure/"]
-COPY ["Ape.Volo.Repository/Ape.Volo.Repository.csproj", "Ape.Volo.Repository/"]
-COPY ["Ape.Volo.SharedModel/Ape.Volo.SharedModel.csproj", "Ape.Volo.SharedModel/"]
-COPY ["Ape.Volo.TaskService/Ape.Volo.TaskService.csproj", "Ape.Volo.TaskService/"]
-COPY ["Ape.Volo.ViewModel/Ape.Volo.ViewModel.csproj", "Ape.Volo.ViewModel/"]
-RUN dotnet restore "Ape.Volo.Api/Ape.Volo.Api.csproj"
+COPY ["MHZNet.Api/MHZNet.Api.csproj", "MHZNet.Api/"]
+COPY ["MHZNet.Business/MHZNet.Business.csproj", "MHZNet.Business/"]
+COPY ["MHZNet.Common/MHZNet.Common.csproj", "MHZNet.Common/"]
+COPY ["MHZNet.Core/MHZNet.Core.csproj", "MHZNet.Core/"]
+COPY ["MHZNet.Entity/MHZNet.Entity.csproj", "MHZNet.Entity/"]
+COPY ["MHZNet.EventBus/MHZNet.EventBus.csproj", "MHZNet.EventBus/"]
+COPY ["MHZNet.IBusiness/MHZNet.IBusiness.csproj", "MHZNet.IBusiness/"]
+COPY ["MHZNet.Infrastructure/MHZNet.Infrastructure.csproj", "MHZNet.Infrastructure/"]
+COPY ["MHZNet.Repository/MHZNet.Repository.csproj", "MHZNet.Repository/"]
+COPY ["MHZNet.SharedModel/MHZNet.SharedModel.csproj", "MHZNet.SharedModel/"]
+COPY ["MHZNet.TaskService/MHZNet.TaskService.csproj", "MHZNet.TaskService/"]
+COPY ["MHZNet.ViewModel/MHZNet.ViewModel.csproj", "MHZNet.ViewModel/"]
+RUN dotnet restore "MHZNet.Api/MHZNet.Api.csproj"
 
 COPY . .
-WORKDIR "/src/Ape.Volo.Api"
-RUN dotnet build "Ape.Volo.Api.csproj" -c Release -o /app/build
+WORKDIR "/src/MHZNet.Api"
+RUN dotnet build "MHZNet.Api.csproj" -c Release -o /app/build
 
 # 发布应用
 FROM build AS publish
-RUN dotnet publish "Ape.Volo.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "MHZNet.Api.csproj" -c Release -o /app/publish
 
 # 运行阶段
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Ape.Volo.Api.dll"]
+ENTRYPOINT ["dotnet", "MHZNet.Api.dll"]

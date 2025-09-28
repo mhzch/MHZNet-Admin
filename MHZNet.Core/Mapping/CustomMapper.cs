@@ -6,36 +6,37 @@ using Mapster;
 namespace MHZNet.Core.Mapping;
 
 /// <summary>
-/// ¶ÔÏóÓ³Éä
+/// è‡ªå®šä¹‰æ˜ å°„
 /// </summary>
 public class CustomMapper : IRegister
 {
     /// <summary>
-    /// ×¢²á
+    /// æ³¨å†Œ
     /// </summary>
     /// <param name="config"></param>
     public void Register(TypeAdapterConfig config)
     {
-        var viewModelTypes = GlobalType.ViewModelTypes
-            .Where(x => x.GetCustomAttribute<AutoMappingAttribute>() != null)
-            .Select(x => x.GetCustomAttribute<AutoMappingAttribute>());
+        // æ³¨é‡Šæ‰ä¸å­˜åœ¨çš„ç¨‹åºé›†ç±»å‹å¼•ç”¨
+        // var viewModelTypes = GlobalType.ViewModelTypes
+        //     .Where(x => x.GetCustomAttribute<AutoMappingAttribute>() != null)
+        //     .Select(x => x.GetCustomAttribute<AutoMappingAttribute>());
 
-        var dtoTypes = GlobalType.SharedModelTypes
-            .Where(x => x.GetCustomAttribute<AutoMappingAttribute>() != null)
-            .Select(x => x.GetCustomAttribute<AutoMappingAttribute>());
+        // var dtoTypes = GlobalType.SharedModelTypes
+        //     .Where(x => x.GetCustomAttribute<AutoMappingAttribute>() != null)
+        //     .Select(x => x.GetCustomAttribute<AutoMappingAttribute>());
 
-        List<(Type sourceType, Type targetType)> maps = (from attribute in viewModelTypes
-            where attribute != null
-            select (attribute.SourceType, attribute.TargetType)).ToList();
-        maps.AddRange(from attribute in dtoTypes
-            where attribute != null
-            select (attribute.TargetType, attribute.SourceType));
+        // List<(Type sourceType, Type targetType)> maps = (from attribute in viewModelTypes
+        //     where attribute != null
+        //     select (attribute.SourceType, attribute.TargetType)).ToList();
+        // maps.AddRange(from attribute in dtoTypes
+        //     where attribute != null
+        //     select (attribute.TargetType, attribute.SourceType));
 
 
-        //¸ù¾İAutoMappingAttributeÌØĞÔ×Ô¶¯Ó³Éä
-        maps.ForEach(aMap => { config.NewConfig(aMap.sourceType, aMap.targetType); });
+        // æ ¹æ®AutoMappingAttributeç‰¹æ€§è‡ªåŠ¨æ˜ å°„
+        // maps.ForEach(aMap => { config.NewConfig(aMap.sourceType, aMap.targetType); });
 
-        //×Ô¶¨ÒåÓ³Éä »á¸²¸Ç´æÔÚµÄ
+        //è‡ªå®šä¹‰æ˜ å°„ è¦†ç›–ä¸å­˜åœ¨çš„
         // config.NewConfig<User, UserDto>() .Ignore(dest => dest.Password)
         //     .Map(dest => dest.Dept123, src => src.Dept.Adapt<DepartmentSmallDto>());
     }

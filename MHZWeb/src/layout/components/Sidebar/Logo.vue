@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      title: 'ApeVolo-后台管理',
+      title: 'MHZNet-后台管理',
       logo: Logo
     }
   }

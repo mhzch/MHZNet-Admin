@@ -9,7 +9,7 @@
       class="login-form animated bounceIn"
     >
       <h3 class="title">
-        ApeVolo 后台管理系统
+        MHZNet 后台管理系统
       </h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
@@ -77,7 +77,7 @@ export default {
       Background: Background,
       codeUrl: '',
       loginForm: {
-        username: 'apevolo',
+        username: 'mhznet',
         password: '123456',
         captcha: '',
         captchaId: '',

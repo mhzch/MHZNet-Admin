@@ -425,7 +425,7 @@
         </member>
         <member name="T:MHZNet.Business.Permission.DataScopeService">
             <summary>
-            鏁版嵁鏉冮檺鏈嶅姟
+            数据权限服务
             </summary>
         </member>
         <member name="M:MHZNet.Business.Permission.DataScopeService.#ctor(SqlSugar.ISqlSugarClient)">
@@ -436,7 +436,7 @@
         </member>
         <member name="M:MHZNet.Business.Permission.DataScopeService.GetDataScopeAccountsAsync(System.Int64)">
             <summary>
-            鑾峰彇鐢ㄦ埛鎵€鏈夎鑹插叧鑱旂殑閮ㄩ棬ID
+            获取用户所有角色关联的部门ID
             </summary>
             <param name="userId"></param>
             <returns></returns>
@@ -631,7 +631,8 @@
         </member>
         <member name="M:MHZNet.Business.Permission.MenuService.FindSuperiorAsync(System.Int64)">
             <summary>
-            查询同级与父级菜�?    /// </summary>
+            查询同级与父级菜单
+            </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
@@ -659,7 +660,8 @@
         </member>
         <member name="M:MHZNet.Business.Permission.MenuService.FindChildIdsAsync(System.Collections.Generic.List{MHZNet.PO.Core.Permission.Menu},System.Collections.Generic.List{System.Int64})">
             <summary>
-            获取所有下级菜�?    /// </summary>
+            获取所有下级菜单
+            </summary>
             <param name="menuList"></param>
             <param name="ids"></param>
             <returns></returns>
@@ -673,7 +675,7 @@
         </member>
         <member name="T:MHZNet.Business.Permission.OnlineUserService">
             <summary>
-            鍦ㄧ嚎鐢ㄦ埛service
+            在线用户service
             </summary>
         </member>
         <member name="M:MHZNet.Business.Permission.OnlineUserService.#ctor(Shyjus.BrowserDetection.IBrowserDetector,IP2Region.Net.Abstractions.ISearcher)">
@@ -685,14 +687,14 @@
         </member>
         <member name="M:MHZNet.Business.Permission.OnlineUserService.SaveLoginUserAsync(MHZNet.VO.Jwt.JwtUserVo,System.String)">
             <summary>
-            淇濆瓨鍦ㄧ嚎鐢ㄦ埛
+            保存在线用户
             </summary>
             <param name="jwtUserVo"></param>
             <param name="remoteIp"></param>
         </member>
         <member name="M:MHZNet.Business.Permission.OnlineUserService.CreateJwtUserAsync(MHZNet.VO.Core.Permission.User.UserVo,System.Collections.Generic.List{System.String})">
             <summary>
-            鍒涘缓Jwt瀵硅薄
+            创建Jwt对象
             </summary>
             <param name="userVo"></param>
             <param name="permissionRoles"></param>
@@ -887,7 +889,7 @@
         </member>
         <member name="T:MHZNet.Business.Queued.QueuedEmailService">
             <summary>
-            閭欢闃熷垪鎺ュ彛瀹炵幇
+            邮件队列接口实现
             </summary>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.#ctor(MHZNet.IBusiness.Message.Email.IEmailMessageTemplateService,MHZNet.IBusiness.Message.Email.IEmailAccountService,MHZNet.IBusiness.Message.Email.IEmailSender,Microsoft.Extensions.Logging.ILogger{MHZNet.Business.Queued.QueuedEmailService})">
@@ -901,35 +903,35 @@
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.CreateAsync(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
             <summary>
-            鏂板
+            新增
             </summary>
             <param name="createUpdateQueuedEmailDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.UpdateTriesAsync(MHZNet.PO.Core.Queued.QueuedEmail)">
             <summary>
-            鏇存柊
+            更新
             </summary>
             <param name="queuedEmail"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.UpdateAsync(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
             <summary>
-            鏇存柊
+            更新
             </summary>
             <param name="createUpdateQueuedEmailDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
             <summary>
-            鍒犻櫎
+            删除
             </summary>
             <param name="ids"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.QueryAsync(MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ヨ
+            查询
             </summary>
             <param name="queuedEmailQueryCriteria"></param>
             <param name="pagination"></param>
@@ -937,14 +939,16 @@
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.ResetEmail(System.String,System.String)">
             <summary>
-            鍙樻洿閭楠岃瘉鐮?    /// </summary>
+            变更邮箱验证码
+            </summary>
             <param name="emailAddress"></param>
             <param name="messageTemplateName"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.Queued.QueuedEmailService.QueryToSendMailAsync(MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria)">
             <summary>
-            鏌ヨ 鍙戦€侀偖浠?    /// </summary>
+            查询 发送邮件
+            </summary>
             <param name="queuedEmailQueryCriteria"></param>
             <returns></returns>
         </member>
@@ -1142,7 +1146,7 @@
         </member>
         <member name="T:MHZNet.Business.System.QuartzNetService">
             <summary>
-            QuartzNet浣滀笟鏈嶅姟
+            QuartzNet作业服务
             </summary>
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.#ctor(MHZNet.IBusiness.System.IQuartzNetLogService)">
@@ -1153,13 +1157,13 @@
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.QueryAllAsync">
             <summary>
-            鏌ヨ鍏ㄩ儴
+            查询全部
             </summary>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
             <summary>
-            鍒涘缓
+            创建
             </summary>
             <param name="createUpdateQuartzNetDto"></param>
             <returns></returns>
@@ -1167,14 +1171,14 @@
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
             <summary>
-            鏇存柊
+            更新
             </summary>
             <param name="createUpdateQuartzNetDto"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.UpdateJobInfoAsync(MHZNet.PO.Core.System.QuartzNet.QuartzNet,MHZNet.PO.Core.System.QuartzNet.QuartzNetLog)">
             <summary>
-            鏇存柊浣滀笟
+            更新作业
             </summary>
             <param name="quartzNet"></param>
             <param name="quartzNetLog"></param>
@@ -1182,14 +1186,14 @@
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.DeleteAsync(System.Collections.Generic.List{MHZNet.PO.Core.System.QuartzNet.QuartzNet})">
             <summary>
-            鍒犻櫎
+            删除
             </summary>
             <param name="quartzNets"></param>
             <returns></returns>
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.QueryAsync(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
             <summary>
-            鏌ヨ
+            查询
             </summary>
             <param name="quartzNetQueryCriteria"></param>
             <param name="pagination"></param>
@@ -1197,7 +1201,7 @@
         </member>
         <member name="M:MHZNet.Business.System.QuartzNetService.DownloadAsync(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria)">
             <summary>
-            涓嬭浇
+            下载
             </summary>
             <param name="quartzNetQueryCriteria"></param>
             <returns></returns>
@@ -1245,7 +1249,8 @@
         </member>
         <member name="M:MHZNet.Business.System.SettingService.GetSettingValue``1(System.String)">
             <summary>
-            获取设置 �?    /// </summary>
+            获取设置值
+            </summary>
             <param name="settingName"></param>
             <typeparam name="T"></typeparam>
             <returns></returns>

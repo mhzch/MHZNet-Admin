@@ -26,7 +26,7 @@ public class ExceptionLogController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public ExceptionLogController(IExceptionLogService exceptionLogService)
     {
         _exceptionLogService = exceptionLogService;

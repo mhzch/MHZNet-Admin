@@ -9,7 +9,7 @@ export default {
   name: 'Doc',
   methods: {
     click() {
-      window.open('http://doc.apevolo.com', '_blank')
+      // 文档链接已移除
     }
   }
 }

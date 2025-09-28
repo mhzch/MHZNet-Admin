@@ -30,7 +30,7 @@ public class FileRecordController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public FileRecordController(IFileRecordService fileRecordService)
     {
         _fileRecordService = fileRecordService;

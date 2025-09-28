@@ -17,15 +17,15 @@ using Serilog;
 namespace MHZNet.EventBus.EventBusRabbitMQ;
 
 /// <summary>
-/// RabbitMQÏûÏ¢¶ÓÁĞÊÂ¼ş
+/// RabbitMQæ¶ˆæ¯æ€»çº¿äº‹ä»¶
 /// </summary>
 public class EventBusRabbitMq : IEventBus, IDisposable
 {
-    #region ×Ö¶Î
+    #region å­—æ®µ
 
     private static readonly ILogger Logger = SerilogManager.GetLogger(typeof(EventBusRabbitMq));
-    const string BrokerName = "apevolo_event_bus";
-    const string AutofacScopeName = "apevolo_event_bus";
+    const string BrokerName = "mhznet_event_bus";
+    const string AutofacScopeName = "mhznet_event_bus";
     private readonly IRabbitMqPersistentConnection _persistentConnection;
     private readonly IEventBusSubscriptionsManager _subsManager;
     private readonly ILifetimeScope _autofac;
@@ -34,12 +34,12 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     private string _subscriptionClientName;
 
-    //ºóÃæ°ÑAutoFacµÄ¸Ä³É.net core ×Ô´øµÄÉúÃüÖÜÆÚ
+    //æ›¿æ¢AutoFacçš„æ”¹æˆ.net core è‡ªå¸¦ä¾èµ–æ³¨å…¥å®¹å™¨
     private readonly IServiceProvider _serviceProvider;
 
     #endregion
 
-    #region ¹¹Ôìº¯Êı
+    #region æ„é€ å‡½æ•°
 
     public EventBusRabbitMq(IServiceProvider serviceProvider, IRabbitMqPersistentConnection persistentConnection,
         ILifetimeScope autofac, string subscriptionClientName, IEventBusSubscriptionsManager? subsManager,
@@ -57,10 +57,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region ·¢²¼Óë¶©ÔÄ
+    #region å‘å¸ƒè®¢é˜…
 
     /// <summary>
-    /// ·¢²¼
+    /// å‘å¸ƒ
     /// </summary>
     /// <param name="event"></param>
     public void Publish(IntegrationEvent @event)
@@ -106,7 +106,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
     }
 
     /// <summary>
-    /// ¶©ÔÄ
+    /// è®¢é˜…
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TH"></typeparam>
@@ -124,7 +124,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
 
     /// <summary>
-    /// È¡Ïû¶©ÔÄ
+    /// å–æ¶ˆè®¢é˜…
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="TH"></typeparam>
@@ -140,7 +140,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
 
     /// <summary>
-    /// ¶¯Ì¬¶©ÔÄ
+    /// åŠ¨æ€è®¢é˜…
     /// </summary>
     /// <typeparam name="TH"></typeparam>
     /// <param name="eventName"></param>
@@ -155,7 +155,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
     }
 
     /// <summary>
-    /// È¡Ïû¶¯Ì¬¶©ÔÄ
+    /// å–æ¶ˆåŠ¨æ€è®¢é˜…
     /// </summary>
     /// <param name="eventName"></param>
     /// <typeparam name="TH"></typeparam>
@@ -167,10 +167,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region ¶©ÔÄÊÂ¼ş
+    #region ç§æœ‰äº‹ä»¶
 
     /// <summary>
-    /// ¶©ÔÄ¹ÜÀíÆ÷É¾³ıÊÂ¼ş
+    /// è®¢é˜…ç®¡ç†å™¨åˆ é™¤äº‹ä»¶
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="eventName"></param>
@@ -197,7 +197,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
 
     /// <summary>
-    /// ×öÄÚ²¿¶©ÔÄ
+    /// å†…éƒ¨è®¢é˜…å¤„ç†
     /// </summary>
     /// <param name="eventName"></param>
     private void DoInternalSubscription(string eventName)
@@ -218,10 +218,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region Ïû·Ñ
+    #region æ¶ˆè´¹
 
     /// <summary>
-    /// ¿ªÊ¼»ù±¾Ïû·Ñ
+    /// å¼€å§‹åŸºç¡€æ¶ˆè´¹
     /// </summary>
     private void StartBasicConsume()
     {
@@ -244,7 +244,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
     }
 
     /// <summary>
-    /// Ïû·ÑÕßÊÕµ½ÏûÏ¢
+    /// æ¶ˆè´¹è€…æ¥æ”¶æ¶ˆæ¯
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="eventArgs"></param>
@@ -277,10 +277,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region ´´½¨Ïû·ÑÕßÆµµÀ´´½¨Ïû·ÑÕßÆµµÀ
+    #region åˆ›å»ºæ¶ˆè´¹è€…é¢‘é“å’Œé‡æ–°åˆ›å»ºé¢‘é“
 
     /// <summary>
-    /// ´´½¨Ïû·ÑÕßÆµµÀ
+    /// åˆ›å»ºæ¶ˆè´¹è€…é¢‘é“
     /// </summary>
     /// <returns></returns>
     private IModel CreateConsumerChannel()
@@ -316,10 +316,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region ½ø³ÌÊÂ¼ş
+    #region å¤„ç†äº‹ä»¶
 
     /// <summary>
-    /// ½ø³ÌÊÂ¼ş£¨Ê¹ÓÃautofac£©ÍÆ¼ö
+    /// å¤„ç†äº‹ä»¶ï¼Œä½¿ç”¨autofacå®¹å™¨æ¨è
     /// </summary>
     /// <param name="eventName"></param>
     /// <param name="message"></param>
@@ -364,7 +364,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
     }
 
     /// <summary>
-    /// ½ø³ÌÊÂ¼ş£¨Ê¹ÓÃ×Ô´øµÄ£©
+    /// å¤„ç†äº‹ä»¶ï¼Œä½¿ç”¨åŸç”Ÿæ¨¡å¼
     /// </summary>
     /// <param name="eventName"></param>
     /// <param name="message"></param>
@@ -374,7 +374,7 @@ public class EventBusRabbitMq : IEventBus, IDisposable
         Logger.Information($"Processing RabbitMQ event: {eventName}");
         if (_subsManager.HasSubscriptionsForEvent(eventName))
         {
-            //°²×° Microsoft.Extensions.DependencyInjectionÀ©Õ¹°ü
+            //ï¿½ï¿½×° Microsoft.Extensions.DependencyInjectionï¿½ï¿½Õ¹ï¿½ï¿½
 
             using (var scope = _serviceProvider.CreateScope())
             {
@@ -413,10 +413,10 @@ public class EventBusRabbitMq : IEventBus, IDisposable
 
     #endregion
 
-    #region ÊÍ·Å
+    #region é‡Šæ”¾
 
     /// <summary>
-    /// ÊÍ·Å
+    /// é‡Šæ”¾
     /// </summary>
     public void Dispose()
     {

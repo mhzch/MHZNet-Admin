@@ -28,7 +28,7 @@ public class JobController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public JobController(IJobService jobService)
     {
         _jobService = jobService;
@@ -121,7 +121,8 @@ public class JobController : BaseApiController
     }
 
     /// <summary>
-    /// 获取所有岗�?    /// </summary>
+    /// 获取所有岗位
+    /// </summary>
     /// <returns></returns>
     [HttpGet]
     [Route("queryAll")]

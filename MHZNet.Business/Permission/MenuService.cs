@@ -372,7 +372,8 @@ public class MenuService : BaseServices<Menu>, IMenuService
     }
 
     /// <summary>
-    /// 查询同级与父级菜�?    /// </summary>
+    /// 查询同级与父级菜单
+    /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
     [UseCache(Expiration = 30, KeyPrefix = GlobalConstants.CachePrefix.LoadMenusById)]
@@ -500,7 +501,8 @@ public class MenuService : BaseServices<Menu>, IMenuService
     }
 
     /// <summary>
-    /// 获取所有下级菜�?    /// </summary>
+    /// 获取所有下级菜单
+    /// </summary>
     /// <param name="menuList"></param>
     /// <param name="ids"></param>
     /// <returns></returns>

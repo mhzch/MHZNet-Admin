@@ -140,7 +140,7 @@ app.UseSession();
 // // Swagger Auth
 app.UseSwaggerAuthorized();
 //Swagger UI
-app.UseSwaggerUiMiddleware(() => Assembly.GetExecutingAssembly().GetManifestResourceStream("Ape.Volo.Api.index.html"));
+app.UseSwaggerUiMiddleware(() => Assembly.GetExecutingAssembly().GetManifestResourceStream("MHZNet.Api.index.html"));
 
 
 // CORS跨域

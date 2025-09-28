@@ -6,7 +6,8 @@ using Castle.DynamicProxy;
 namespace MHZNet.Core.Aop;
 
 /// <summary>
-/// Redis缓存拦截�?/// </summary>
+/// Redis缓存拦截器
+/// </summary>
 public class CacheAop : IInterceptor
 {
     private readonly ICache _cache;
@@ -107,7 +108,8 @@ public class CacheAop : IInterceptor
     }
 
     /// <summary>
-    /// 获取参数值类型�?    /// </summary>
+    /// 获取参数值类型
+    /// </summary>
     /// <param name="arg"></param>
     /// <returns></returns>
     private static string GetArgumentValue(object arg)

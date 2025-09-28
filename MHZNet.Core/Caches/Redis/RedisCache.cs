@@ -109,8 +109,8 @@ public class RedisCache : ICache
     /// <summary>
     /// 添加缓存
     /// </summary>
-    /// <param name="key">�?/param>
-    /// <param name="value">�?/param>
+    /// <param name="key">键</param>
+    /// <param name="value">值</param>
     /// <param name="timeSpan">过期时间</param>
     /// <param name="redisExpireType">过期类型</param>
     /// <returns>添加结果</returns>
@@ -138,8 +138,8 @@ public class RedisCache : ICache
     /// <summary>
     /// 添加缓存
     /// </summary>
-    /// <param name="key">�?/param>
-    /// <param name="value">�?/param>
+    /// <param name="key">键</param>
+    /// <param name="value">值</param>
     /// <param name="timeSpan">过期时间</param>
     /// <param name="redisExpireType">过期类型</param>
     /// <returns>添加结果</returns>
@@ -170,7 +170,7 @@ public class RedisCache : ICache
     /// <summary>
     /// 移除缓存
     /// </summary>
-    /// <param name="key">�?/param>
+    /// <param name="key">键</param>
     /// <returns>移除结果</returns>
     public bool Remove(string key)
     {
@@ -180,7 +180,7 @@ public class RedisCache : ICache
     /// <summary>
     /// 移除缓存
     /// </summary>
-    /// <param name="key">�?/param>
+    /// <param name="key">键</param>
     /// <returns>移除结果</returns>
     public async Task<bool> RemoveAsync(string key)
     {
@@ -190,18 +190,18 @@ public class RedisCache : ICache
     #endregion
 
     /// <summary>
-    /// 模糊查询key的集�?
+    /// 模糊查询key的集合
     /// </summary>
     /// <param name="key"></param>
     /// <returns></returns>
     public async Task<string[]> ScriptEvaluateKeys(string key)
     {
-        var pattern = $"{key}*"; //匹配�?
+        var pattern = $"{key}*"; //匹配符
         var redisResult = await _database.ScriptEvaluateAsync(LuaScript.Prepare(
             //Redis的keys模糊查询
             " local res = redis.call('KEYS', @keypattern) " +
             " return res "), new { keypattern = pattern });
-        string[] preSult = (string[])redisResult; //将返回的结果集转为数�?
+        string[] preSult = (string[])redisResult; //将返回的结果集转为数组
         return preSult;
     }
 }

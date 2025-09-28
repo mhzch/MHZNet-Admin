@@ -30,7 +30,7 @@ public class PermissionsController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public PermissionsController(IRoleService roleService, IMenuService menuService, IApisService apisService)
     {
         _roleService = roleService;
@@ -43,7 +43,8 @@ public class PermissionsController : BaseApiController
     #region 对内接口
 
     /// <summary>
-    /// 查询所有菜�?    /// </summary>
+    /// 查询所有菜单
+    /// </summary>
     /// <returns></returns>
     [HttpGet]
     [Route("menus/query")]

@@ -13,7 +13,7 @@
 *.DB
 .DS_Store
 DemoFilter.cs
-Ape.Volo.*.xml
+MHZNet.*.xml
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)

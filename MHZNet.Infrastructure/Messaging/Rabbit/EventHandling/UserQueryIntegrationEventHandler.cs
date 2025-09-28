@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace MHZNet.Infrastructure.Messaging.Rabbit.EventHandling
 {
     /// <summary>
-    /// ²âÊÔrabbitmqÊÂ¼þ×ÜÏß
+    /// ï¿½ï¿½ï¿½ï¿½rabbitmqï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public class UserQueryIntegrationEventHandler : IIntegrationEventHandler<UserQueryIntegrationEvent>
     {
@@ -22,13 +22,13 @@ namespace MHZNet.Infrastructure.Messaging.Rabbit.EventHandling
         }
 
         /// <summary>
-        /// ´¦ÀíÊÂ¼þ
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         /// </summary>
         /// <param name="event"></param>
         public async Task Handle(UserQueryIntegrationEvent @event)
         {
             _logger.LogInformation($"----- Handling integration event: {@event.Id} at {@event}");
-            ConsoleHelper.WriteLine($"----- Handling integration event: {@event.Id} at ApeVolo - ({@event})");
+            ConsoleHelper.WriteLine($"----- Handling integration event: {@event.Id} at MHZNet - ({@event})");
             await _userService.QueryByIdAsync(@event.UserId);
         }
     }

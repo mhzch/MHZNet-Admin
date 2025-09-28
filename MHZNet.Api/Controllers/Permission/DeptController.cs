@@ -22,7 +22,7 @@ namespace MHZNet.Api.Controllers.Permission;
 [Route("/api/dept", Order = 4)]
 public class DeptController : BaseApiController
 {
-    #region 构造函�?
+    #region 构造函数
     public DeptController(IDepartmentService departmentService)
     {
         _departmentService = departmentService;
@@ -160,7 +160,8 @@ public class DeptController : BaseApiController
 
 
     /// <summary>
-    /// 获取同级与父级部�?    /// </summary>
+    /// 获取同级与父级部门
+    /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
     [HttpGet]

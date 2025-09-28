@@ -3,18 +3,18 @@ using System;
 namespace MHZNet.Common.Attributes;
 
 /// <summary>
-/// ×Ô¶¨Òå¼øÈ¨ÌØÐÔ
+/// ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½
 /// </summary>
 [AttributeUsage(AttributeTargets.Method)]
-public class ApeVoloAuthorizeAttribute : Attribute
+public class MHZNetAuthorizeAttribute : Attribute
 {
-    public ApeVoloAuthorizeAttribute(string[] roles)
+    public MHZNetAuthorizeAttribute(string[] roles)
     {
         Roles = roles;
     }
 
     /// <summary>
-    /// ½ÇÉ«´úÂë
+    /// ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public string[] Roles { get; }
 }

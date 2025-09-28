@@ -37,7 +37,7 @@ public class UserService : BaseServices<User>, IUserService
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     /// <summary>
     /// 
     /// </summary>

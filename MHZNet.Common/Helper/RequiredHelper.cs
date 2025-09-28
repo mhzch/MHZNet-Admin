@@ -12,7 +12,7 @@ public static class RequiredHelper
         bool isTrue = true;
         if (entity.IsNull())
             throw new BadRequestException("Object cannot be null. (Parameter '" + new T().GetType().Name + "')");
-        var reqName = nameof(ApeVoloRequiredAttribute);
+        var reqName = nameof(MHZNetRequiredAttribute);
         var pis = entity.GetType().GetProperties();
         foreach (var pi in pis)
         {
@@ -22,7 +22,7 @@ public static class RequiredHelper
             {
                 if (attr.GetType().Name == "JsonIgnoreAttribute") continue;
 
-                message = ((ApeVoloRequiredAttribute)attr).Message;
+                message = ((MHZNetRequiredAttribute)attr).Message;
                 var agt = attr.GetType();
                 if (agt.Name == reqName)
                 {

@@ -2,37 +2,30 @@
 
 - 基于 .Net 8 、SqlSugar ORM、Vue 2.X、RBAC、前后端分离的开箱则用的企业级权限开发框架(**中后台管理系统**)
 - 无业务逻辑代码入侵，适用于任何 .NET/C# 应用程序。
-- 预览体验：  [https://www.apevolo.com](https://apevolo.com)
-- 开发文档：  [http://doc.apevolo.com](http://doc.apevolo.com)
-- 账号密码： `apevolo / 123456`
+- MHZNet 是一个现代化的企业级后台管理系统
+- 采用 DTO/VO/PO 架构模式，提供清晰的数据层次结构
 
-#### 💒代码仓库(api)
-- net 版本(Github) <a href="https://github.com/xianhc/ApeVolo.Admin" target="_blank">https://github.com/xianhc/ApeVolo.Admin</a>
-- net 版本(Gitee) <a href="https://gitee.com/xianhc/ApeVolo.Admin" target="_blank">https://gitee.com/xianhc/ApeVolo.Admin</a>
-<br><br>
-- go 版本(Github) <a href="https://github.com/xianhc/ApeVolo.AdminGO" target="_blank">https://github.com/xianhc/ApeVolo.AdminGO</a>
-- go 版本(Gitee) <a href="https://gitee.com/xianhc/ApeVolo.AdminGO" target="_blank">https://gitee.com/xianhc/ApeVolo.adminGO</a>
+#### 💒代码仓库
+- GitHub: <a href="https://github.com/mhzch/MHZNet-Admin" target="_blank">https://github.com/mhzch/MHZNet-Admin</a>
 
-#### 💒代码仓库(web)
-- vue2.x 版本(Github) <a href="https://github.com/xianhc/ApeVolo.Web" target="_blank">https://github.com/xianhc/ApeVolo.Web</a>
-- vue2.x 版本(Gitee) <a href="https://gitee.com/xianhc/ApeVolo.Web" target="_blank">https://gitee.com/xianhc/ApeVolo.Web</a>
+
 
 #### ⚙️模块说明
 
 | # | 模块功能                      |  项目文件                    | 说明|
 |---|-------------------------------|-------------------------------|-------------------------------|
-| 1 | Web 控制器 |Ape.Volo.Api | 接口交互层 |
-| 2 | 业务接口实现 |Ape.Volo.Business | 业务服务接口实现 |
-| 3 | 系统通用 |Ape.Volo.Common | 通用的工具类；扩展方法、文件、图像操作等 |
-| 4 | 系统核心 |Ape.Volo.Core | Aop拦截、系统配置、App服务等 |
-| 5 | 系统实体 |Ape.Volo.Entity | 数据库实体映射类 |
-| 6 | 事件总线 |Ape.Volo.EventBus | 事件总线|
-| 7 | 业务接口 |Ape.Volo.IBusiness | 业务服务接口 |
-| 8 | 基础设施 |Ape.Volo.Infrastructure | 依赖注入、服务扩展等 |
-| 9 | 仓储 |Ape.Volo.Repository | 数据库仓储扩展 事务等 |
-| 10 | 共享模型 |Ape.Volo.SharedModel | 实体(请求DTO、查询参数对象等) |
-| 11 | 作业调度 |Ape.Volo.TaskService | 系统定时任务 |
-| 12 | 视图模型 |Ape.Volo.ViewModel | UI视图层对象 |
+| 1 | Web 控制器 |MHZNet.Api | 接口交互层 |
+| 2 | 业务接口实现 |MHZNet.Business | 业务服务接口实现 |
+| 3 | 系统通用 |MHZNet.Common | 通用的工具类；扩展方法、文件、图像操作等 |
+| 4 | 系统核心 |MHZNet.Core | Aop拦截、系统配置、App服务等 |
+| 5 | 持久化对象 |MHZNet.PO | 数据库实体映射类 (PO模式) |
+| 6 | 事件总线 |MHZNet.EventBus | 事件总线|
+| 7 | 业务接口 |MHZNet.IBusiness | 业务服务接口 |
+| 8 | 基础设施 |MHZNet.Infrastructure | 依赖注入、服务扩展等 |
+| 9 | 仓储 |MHZNet.Repository | 数据库仓储扩展 事务等 |
+| 10 | 数据传输对象 |MHZNet.DTO | 数据传输对象 (DTO模式) |
+| 11 | 作业调度 |MHZNet.TaskService | 系统定时任务 |
+| 12 | 视图对象 |MHZNet.VO | UI视图层对象 (VO模式) |
 
 #### 🚀系统特性
 - 使用  Async Await 异步编程
@@ -67,33 +60,16 @@
 
 ##### 运行
 
-1. 下载项目，编译无误。然后启动`Ape.Volo.Api`
+1. 下载项目，编译无误。然后启动`MHZNet.Api`
 2. 系统便会自动创建数据库表并初始化相关基础数据
 3. 系统默认使用`Sqlite`数据库与`DistributedCache`缓存
 
 
-#### ⭐️支持作者
-如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/xianhc/ApeVolo.Admin">Github</a> 或者
-<a target="_blank" href="https://gitee.com/xianhc/ApeVolo.Admin">Gitee</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持。
-
-#### 🙋反馈交流
-##### QQ群：839263566
-| QQ 群 |
-|  :---:  |
-| <img width="150" src="https://www.apevolo.com/uploads/file/wechat/20230723172503.jpg">
-
-##### 微信群
-| 微信 |
-|  :---:  |
-| <img width="150" src="https://www.apevolo.com/uploads/file/wechat/20230723172451.jpg">
-
-添加微信，备注"加群"
-
-#### 🤟捐赠
-如果你觉得这个项目对你有帮助，你可以请作者喝饮料 :tropical_drink: [点我](http://doc.apevolo.com/donate/)
+#### ⭐️支持项目
+如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/mhzch/MHZNet-Admin">Github</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持。
 
 #### 🤝致谢
-![JetBrains Logo (Main) logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)
+感谢所有为开源社区做出贡献的开发者们。
 
-#### 💡其他
-<a target="_blank" href="https://github.com/xianhc/ApeVolo.AdminGO">ApeVolo.AdminGO</a> 是一个基于 GO 语言开发的 <a target="_blank" href="https://github.com/xianhc/ApeVolo.Admin">ApeVolo.Admin</a>复刻版本<br>
+#### 💡说明
+MHZNet 是一个现代化的企业级后台管理系统，采用 DTO/VO/PO 架构模式，提供清晰的数据层次结构。

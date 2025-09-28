@@ -23,19 +23,19 @@ using Microsoft.AspNetCore.Mvc.Routing;
 namespace MHZNet.Api.Controllers.Permission;
 
 /// <summary>
-/// Apis¹ÜÀí
+/// Apisç®¡ç†
 /// </summary>
 [Area("Area.ApiManagement")]
 [Route("/api/apis", Order = 20)]
 public class ApisController : BaseApiController
 {
-    #region ×Ö¶Î
+    #region å­—æ®µ
 
     private readonly IApisService _apisService;
 
     #endregion
 
-    #region ¹¹Ôìº¯Êı
+    #region æ„é€ å‡½æ•°
 
     public ApisController(IApisService apisService)
     {
@@ -44,10 +44,10 @@ public class ApisController : BaseApiController
 
     #endregion
 
-    #region ÄÚ²¿½Ó¿Ú
+    #region å†…éƒ¨æ¥å£
 
     /// <summary>
-    /// ĞÂÔöApi
+    /// åˆ›å»ºApi
     /// </summary>
     /// <param name="createUpdateApisDto"></param>
     /// <returns></returns>
@@ -69,7 +69,7 @@ public class ApisController : BaseApiController
     }
 
     /// <summary>
-    /// ¸üĞÂApi
+    /// æ›´æ–°Api
     /// </summary>
     /// <param name="createUpdateApisDto"></param>
     /// <returns></returns>
@@ -91,7 +91,7 @@ public class ApisController : BaseApiController
     }
 
     /// <summary>
-    /// É¾³ıApi
+    /// åˆ é™¤Api
     /// </summary>
     /// <param name="idCollection"></param>
     /// <returns></returns>
@@ -112,7 +112,7 @@ public class ApisController : BaseApiController
     }
 
     /// <summary>
-    /// ²é¿´ApisÁĞ±í
+    /// æŸ¥çœ‹Apisåˆ—è¡¨
     /// </summary>
     /// <param name="apisQueryCriteria"></param>
     /// <param name="pagination"></param>
@@ -130,7 +130,7 @@ public class ApisController : BaseApiController
 
 
     /// <summary>
-    /// Ë¢ĞÂApiÁĞ±í Ö»ÊµÏÖÁËĞÂÔöµÄapiÌí¼Ó
+    /// åˆ·æ–°Apiåˆ—è¡¨ åªå®ç°å¢é‡æ›´æ–°apiæ¥å£
     /// </summary>
     /// <returns></returns>
     [HttpPost]
@@ -143,7 +143,7 @@ public class ApisController : BaseApiController
         var allApis = await _apisService.QueryAllAsync();
         var types = GlobalType.ApiTypes.Where(x =>
                 x.IsClass && typeof(Controller).IsAssignableFrom(x) && x.Name != "TestController" &&
-                x.Namespace != "Ape.Volo.Api.Controllers.Base")
+                x.Namespace != "MHZNet.Api.Controllers.Base")
             .OrderBy(x => x.GetCustomAttributes<RouteAttribute>().FirstOrDefault()?.Order).ToList();
         foreach (var type in types)
         {

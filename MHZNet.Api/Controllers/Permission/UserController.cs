@@ -30,7 +30,7 @@ public class UserController : BaseApiController
 
     #endregion
 
-    #region 构造函�?
+    #region 构造函数
     public UserController(IUserService userService)
     {
         _userService = userService;
@@ -157,7 +157,7 @@ public class UserController : BaseApiController
     [Route("update/avatar")]
     [Description("Action.UpdateAvatar")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ActionResultVm))]
-    public async Task<ActionResult> UpdateAvatar([FromForm] IFormFile avatar) //多文件使�? IFormFileCollection
+    public async Task<ActionResult> UpdateAvatar([FromForm] IFormFile avatar) //多文件使用 IFormFileCollection
     {
         if (avatar.IsNull())
         {
