@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MHZNet.DTO\MHZNet.DTO.csproj" />
+    <ProjectReference Include="..\MHZNet.VO\MHZNet.VO.csproj" />
+  </ItemGroup>
+  
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>MHZNet.IBusiness.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
+

@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MHZNet.DTO</name>
+    </assembly>
+    <members>
+        <member name="T:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto">
+            <summary>
+            閭璐︽埛Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.Email">
+             <summary>
+            鐢靛瓙閭欢鍦板潃
+             </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.DisplayName">
+            <summary>
+            鐢靛瓙閭欢鏄剧ず鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.Host">
+            <summary>
+            鐢靛瓙閭欢涓绘満
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.Port">
+            <summary>
+            鐢靛瓙閭欢绔彛
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.Username">
+            <summary>
+            鐢靛瓙閭欢鐢ㄦ埛鍚?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.Password">
+            <summary>
+            鐢靛瓙閭欢瀵嗙爜
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.EnableSsl">
+            <summary>
+            鏄惁SSL
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto.UseDefaultCredentials">
+            <summary>
+            鏄惁涓庤姹備竴璧峰彂閫佸簲鐢ㄧ▼搴忕殑榛樿绯荤粺鍑嵁
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto">
+            <summary>
+            閭妯℃澘Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.Name">
+            <summary>
+            妯℃澘鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.BccEmailAddresses">
+            <summary>
+            鎶勯€侀偖绠卞湴鍧€
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.Subject">
+            <summary>
+            涓婚
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.Body">
+            <summary>
+            鍐呭
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.IsActive">
+            <summary>
+            鏄惁婵€娲?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto.EmailAccountId">
+            <summary>
+            閭璐︽埛鏍囪瘑绗?    /// </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto.Method">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto">
+            <summary>
+            部门Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto">
+            <summary>
+            岗位Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto">
+            <summary>
+            鑿滃崟Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Title">
+            <summary>
+            鏍囬
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Path">
+            <summary>
+            璺緞
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Permission">
+            <summary>
+            鏉冮檺鏍囪瘑
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.IFrame">
+            <summary>
+            鏄惁IFrame
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Component">
+            <summary>
+            缁勪欢
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.ComponentName">
+            <summary>
+            缁勪欢鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.ParentId">
+            <summary>
+            鐖剁骇ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Sort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Icon">
+            <summary>
+            Icon鍥炬爣
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Type">
+            <summary>
+            绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Cache">
+            <summary>
+            缂撳瓨
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.Hidden">
+            <summary>
+            闅愯棌
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto.SubCount">
+            <summary>
+            瀛愯彍鍗曚釜鏁?    /// </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto">
+            <summary>
+            角色Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.DataScopeType">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.Permission">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto.Depts">
+            <summary>
+            角色部门
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.RoleApisDto">
+            <summary>
+            角色菜单Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.RoleApisDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.RoleDeptDto">
+            <summary>
+            角色部门Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.RoleDeptDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.RoleMenuDto">
+            <summary>
+            角色菜单Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.RoleMenuDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto">
+            <summary>
+            更新角色Api
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto.Id">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto.Apis">
+            <summary>
+            角色菜单
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto">
+            <summary>
+            更新角色菜单
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto.Id">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto.Menus">
+            <summary>
+            角色菜单
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto">
+            <summary>
+            鐢ㄦ埛Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Username">
+            <summary>
+            鐢ㄦ埛鍚?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.NickName">
+            <summary>
+            鏄电О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Email">
+            <summary>
+            閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Enabled">
+            <summary>
+            鏄惁婵€娲?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Phone">
+            <summary>
+            鐢佃瘽
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Gender">
+            <summary>
+            鎬у埆
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Dept">
+            <summary>
+            閮ㄩ棬
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Roles">
+            <summary>
+            瑙掕壊
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.Jobs">
+            <summary>
+            宀椾綅
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto.TenantId">
+            <summary>
+            绉熸埛ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserCenterDto">
+            <summary>
+            用户个人中心Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserCenterDto.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserCenterDto.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserCenterDto.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserEmailDto">
+            <summary>
+            用户邮箱Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserEmailDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserEmailDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserEmailDto.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserPassDto">
+            <summary>
+            鐢ㄦ埛瀵嗙爜Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserPassDto.OldPassword">
+            <summary>
+            鏃у瘑鐮?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserPassDto.NewPassword">
+            <summary>
+            鏂板瘑鐮?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UpdateUserPassDto.ConfirmPassword">
+            <summary>
+            纭鏂板瘑鐮?    /// </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UserDeptDto">
+            <summary>
+            用户部门Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UserDeptDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UserJobDto">
+            <summary>
+            用户岗位Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UserJobDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UserJobDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Permission.User.UserRoleDto">
+            <summary>
+            用户角色Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UserRoleDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Permission.User.UserRoleDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto">
+            <summary>
+            邮件队列Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.From">
+            <summary>
+            发件邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.FromName">
+            <summary>
+            发件人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.To">
+            <summary>
+            收件邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.ToName">
+            <summary>
+            收件人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.ReplyTo">
+            <summary>
+            回复邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.ReplyToName">
+            <summary>
+            回复人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.Cc">
+            <summary>
+            抄送
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.Bcc">
+            <summary>
+            密件抄送
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.Subject">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.Body">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.SentTries">
+            <summary>
+            发送上限次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto.EmailAccountId">
+            <summary>
+            发件邮箱ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto">
+            <summary>
+            应用密钥Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto.AppSecretKey">
+            <summary>
+            签名Key
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto">
+            <summary>
+            鏂囦欢璁板綍Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.Description">
+            <summary>
+            鎻忚堪 Sys.Description
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.ContentType">
+            <summary>
+            鏂囦欢绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.ContentTypeName">
+            <summary>
+            鏂囦欢绫诲瀷鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.ContentTypeNameEn">
+            <summary>
+            鏂囦欢绫诲瀷鍚嶇О(EN)
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.OriginalName">
+            <summary>
+            婧愬悕绉?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.NewName">
+            <summary>
+            鏂板悕绉?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.FilePath">
+            <summary>
+            瀛樺偍璺緞
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto.Size">
+            <summary>
+            鏂囦欢澶у皬
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto">
+            <summary>
+            浠诲姟璋冨害Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.TaskName">
+            <summary>
+            浠诲姟鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.TaskGroup">
+            <summary>
+            浠诲姟鍒嗙粍
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.Cron">
+            <summary>
+            cron 琛ㄨ揪寮?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.AssemblyName">
+            <summary>
+            绋嬪簭闆嗗悕绉?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.ClassName">
+            <summary>
+            浠诲姟鎵€鍦ㄧ被
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.Description">
+            <summary>
+            浠诲姟鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.Principal">
+            <summary>
+            浠诲姟璐熻矗浜?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.AlertEmail">
+            <summary>
+            鍛婅閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.PauseAfterFailure">
+            <summary>
+            浠诲姟澶辫触鍚庢槸鍚︾户缁?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.RunTimes">
+            <summary>
+            鎵ц娆℃暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.StartTime">
+            <summary>
+            寮€濮嬫椂闂?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.EndTime">
+            <summary>
+            缁撴潫鏃堕棿
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.TriggerType">
+            <summary>
+            瑙﹀彂鍣ㄧ被鍨嬶紙0銆乻imple 1銆乧ron锛?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.IntervalSecond">
+            <summary>
+            鎵ц闂撮殧鏃堕棿, 绉掍负鍗曚綅
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.CycleRunTimes">
+            <summary>
+            寰幆鎵ц娆℃暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.IsEnable">
+            <summary>
+            鏄惁鍚姩
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto.RunParams">
+            <summary>
+            鎵ц浼犲弬
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto">
+            <summary>
+            鍏ㄥ眬璁剧疆Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto.Name">
+            <summary>
+            閿?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto.Value">
+            <summary>
+            鍊?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.TenantId">
+            <summary>
+            租户Id 用户绑定用的
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.ConfigId">
+            <summary>
+            标识Id 获取租户连接用的
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.DbType">
+            <summary>
+            数据库类型<br/>
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto.Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto">
+            <summary>
+            瀛楀吀璇︽儏Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto.DictId">
+            <summary>
+            瀛楀吀ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto.Label">
+            <summary>
+            鏍囩
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto.Value">
+            <summary>
+            鍊?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto.DictSort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto">
+            <summary>
+            字典Dto
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto.DictType">
+            <summary>
+            字典类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Common.IdCollection">
+            <summary>
+            id模型(log)
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.IdCollection.IdArray">
+            <summary>
+            ids
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Common.IdCollectionString">
+            <summary>
+            id模型(string)
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.IdCollectionString.IdArray">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Common.Pagination">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="M:MHZNet.DTO.Queries.Common.Pagination.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.Pagination.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.Pagination.PageSize">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.Pagination.SortFields">
+            <summary>
+            排序列
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.Pagination.TotalElements">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.Pagination.TotalPages">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Common.QueryOptions`1">
+            <summary>
+            查询操作对象
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.Pagination">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.WhereLambda">
+            <summary>
+            条件表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.ConditionalModels">
+            <summary>
+            条件模型
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.SelectExpression">
+            <summary>
+            查询表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.IsSplitTable">
+            <summary>
+            是否分表
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.IsIncludes">
+            <summary>
+            是否查询全部一级导航属性
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.IgnorePropertyNameList">
+            <summary>
+            忽略的查询导航属性 IncludesAll为true才有用
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.LockString">
+            <summary>
+            锁 分页查询默认NoLock
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Common.QueryOptions`1.CacheDurationInSeconds">
+            <summary>
+            缓存时间(秒)
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Login.LoginAuthUser">
+            <summary>
+            登录用户
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.LoginAuthUser.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.LoginAuthUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.LoginAuthUser.Captcha">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.LoginAuthUser.CaptchaId">
+            <summary>
+            验证码ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Login.SwaggerLoginAuthUser">
+            <summary>
+            Swagger登录用户
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.SwaggerLoginAuthUser.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Login.SwaggerLoginAuthUser.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria">
+            <summary>
+            邮箱账户查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria">
+            <summary>
+            邮箱模板查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria.IsActive">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.ApisQueryCriteria">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.ApisQueryCriteria.Group">
+            <summary>
+            组名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.ApisQueryCriteria.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.ApisQueryCriteria.Method">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.DeptQueryCriteria">
+            <summary>
+            部门查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.DeptQueryCriteria.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.DeptQueryCriteria.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.DeptQueryCriteria.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.JobQueryCriteria">
+            <summary>
+            岗位查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.JobQueryCriteria.Name">
+            <summary>
+            岗位名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.JobQueryCriteria.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.MenuQueryCriteria">
+            <summary>
+            菜单查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.MenuQueryCriteria.Title">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.MenuQueryCriteria.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.RoleQueryCriteria">
+            <summary>
+            角色查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.RoleQueryCriteria.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Permission.UserQueryCriteria">
+            <summary>
+            鐢ㄦ埛鏌ヨ鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.UserQueryCriteria.Id">
+            <summary>
+            鐢ㄦ埛ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.UserQueryCriteria.KeyWords">
+            <summary>
+            鍏抽敭瀛?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.UserQueryCriteria.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.UserQueryCriteria.DeptId">
+            <summary>
+            閮ㄩ棬ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Permission.UserQueryCriteria.DeptIdItems">
+            <summary>
+            閮ㄩ棬ID闆嗗悎 鐢ㄤ簬鏌ヨ
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria">
+            <summary>
+            队列邮件查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria.Id">
+            <summary>
+            队列ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria.MaxTries">
+            <summary>
+            最大执行次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria.EmailAccountId">
+            <summary>
+            发送方
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria.To">
+            <summary>
+            接收方
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria.IsSend">
+            <summary>
+            是否已发送
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.AppsecretQueryCriteria">
+            <summary>
+            瀵嗛挜鏌ヨ鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.AppsecretQueryCriteria.KeyWords">
+            <summary>
+            鍏抽敭瀛?    /// </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.DictDetailQueryCriteria">
+            <summary>
+            字典详情查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.DictDetailQueryCriteria.DictId">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.DictDetailQueryCriteria.DictName">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.DictDetailQueryCriteria.Label">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.DictQueryCriteria">
+            <summary>
+            瀛楀吀鏌ヨ鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.DictQueryCriteria.KeyWords">
+            <summary>
+            鍏抽敭瀛?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.DictQueryCriteria.DictType">
+            <summary>
+            绫诲瀷
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.FileRecordQueryCriteria">
+            <summary>
+            文件记录查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.FileRecordQueryCriteria.KeyWords">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.LogQueryCriteria">
+            <summary>
+            鏃ュ織鏌ヨ鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.LogQueryCriteria.KeyWords">
+            <summary>
+            鍏抽敭瀛?    /// </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria">
+            <summary>
+            任务调度日志查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria.Id">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria.IsSuccess">
+            <summary>
+            是否执行成功
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.QuartzNetQueryCriteria">
+            <summary>
+            任务调度查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.QuartzNetQueryCriteria.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.SettingQueryCriteria">
+            <summary>
+            鍏ㄥ眬璁剧疆鏌ヨ鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.SettingQueryCriteria.KeyWords">
+            <summary>
+            鍏抽敭瀛?    /// </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.SettingQueryCriteria.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="T:MHZNet.DTO.Queries.System.TenantQueryCriteria">
+            <summary>
+            租户查询参数
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.TenantQueryCriteria.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.TenantQueryCriteria.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.DTO.Queries.System.TenantQueryCriteria.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+    </members>
+</doc>

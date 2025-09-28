@@ -1,0 +1,1061 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MHZNet.Api</name>
+    </assembly>
+    <members>
+        <member name="M:MHZNet.Api.ActionExtension.BaseActionFilter.JsonContent(MHZNet.Common.Model.ActionResultVm)">
+            <summary>
+            返回JSON
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.BaseActionFilter.Error(System.String)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.BaseActionFilter.Error(System.String,System.Int32)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <param name="errorCode">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.ActionExtension.Json.JsonParamterAttribute">
+            <summary>
+            Json参数支持
+            </summary>
+        </member>
+        <member name="T:MHZNet.Api.ActionExtension.Json.NoJsonParamterAttribute">
+            <summary>
+            忽略Json参数支持
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Json.NoJsonParamterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Json.NoJsonParamterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:MHZNet.Api.ActionExtension.Jwt.TokenFilterAttribute">
+            <summary>
+            JWT校验
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Jwt.TokenFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="T:MHZNet.Api.ActionExtension.Parameter.ParamRequiredAttribute">
+            <summary>
+            参数必填
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Parameter.ParamRequiredAttribute.#ctor(System.String[])">
+            <summary>
+            参数必填
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Parameter.ParamRequiredAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext">过滤器上下文</param>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Parameter.ParamRequiredAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Sign.IgnoreVerifySignatureAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:MHZNet.Api.ActionExtension.Sign.VerifySignatureAttribute">
+            <summary>
+            鎺ュ彛瀵瑰绛惧悕楠岃瘉
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.ActionExtension.Sign.VerifySignatureAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action鎵ц涔嬪墠鎵ц
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:MHZNet.Api.ActionExtension.Sign.VerifySignatureAttribute.BuildApiSign(System.String,System.String,System.String,System.DateTime,System.String)" -->
+        <member name="T:MHZNet.Api.Controllers.Auth.AuthorizationController">
+            <summary>
+            授权管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.Captcha">
+            <summary>
+            获取验证�?    /// </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.Login(MHZNet.DTO.Queries.Login.LoginAuthUser)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="authUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.RefreshToken(System.String)">
+            <summary>
+            刷新Token
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.ResetEmail(System.String)">
+            <summary>
+            获取验证码，申请变更邮箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.Logout">
+            <summary>
+            系统用户登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.SwaggerLogin(MHZNet.DTO.Queries.Login.SwaggerLoginAuthUser)">
+            <summary>
+            swagger登录
+            </summary>
+            <param name="swaggerLoginAuthUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Auth.AuthorizationController.LoginResult(MHZNet.VO.Core.Permission.User.UserVo,System.String)">
+            <summary>
+            登录或刷新token相应结果
+            </summary>
+            <param name="userDto"></param>
+            <param name="type">login:登录,refresh:刷新token</param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Base.BaseApiController">
+            <summary>
+            API对外接口基控制器
+            </summary>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Base.BaseController">
+            <summary>
+            鍩烘帶鍒跺櫒
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.JsonContent(MHZNet.Common.Model.ActionResultVm)">
+            <summary>
+            
+            </summary>
+            <param name="vm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.JsonContent(System.Object)">
+            <summary>
+            杩斿洖Json
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.JsonContent``1(System.Collections.Generic.List{``0},MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            杩斿洖Json
+            </summary>
+            <param name="content"></param>
+            <param name="pagination"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.JsonContentIgnoreNullValue(System.Object)">
+            <summary>
+            杩斿洖Json  蹇界暐绌哄€煎瓧娈?    /// </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.Ok(MHZNet.Common.Model.OperateResult)">
+            <summary>
+            杩斿洖鍝嶅簲
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.Success(System.String)">
+            <summary>
+            杩斿洖鎴愬姛
+            </summary>
+            <param name="msg">娑堟伅</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.Created(System.String)">
+            <summary>
+            鍒涘缓鎴愬姛
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.Error(System.String)">
+            <summary>
+            杩斿洖閿欒
+            </summary>
+            <param name="msg">閿欒鎻愮ず</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Base.BaseController.Error(MHZNet.Common.Model.ActionError)">
+            <summary>
+            杩斿洖閿欒
+            </summary>
+            <param name="actionError">閿欒闆嗗悎</param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Message.Email.EmailAccountController">
+            <summary>
+            邮箱账户管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailAccountController.Create(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto)">
+            <summary>
+            新增邮箱账户
+            </summary>
+            <param name="createUpdateEmailAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailAccountController.Update(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto)">
+            <summary>
+            更新邮箱账户
+            </summary>
+            <param name="createUpdateEmailAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailAccountController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            删除邮箱账户
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailAccountController.Query(MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            邮箱账户列表
+            </summary>
+            <param name="emailAccountQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailAccountController.Download(MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria)">
+            <summary>
+            导出邮箱账户
+            </summary>
+            <param name="emailAccountQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController">
+            <summary>
+            閭欢妯℃澘绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Create(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
+            <summary>
+            鏂板閭璐︽埛
+            </summary>
+            <param name="createUpdateEmailMessageTemplateDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Update(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
+            <summary>
+            鏇存柊閭璐︽埛
+            </summary>
+            <param name="createUpdateEmailMessageTemplateDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎閭璐︽埛
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Message.Email.EmailMessageTemplateController.Query(MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            閭璐︽埛鍒楄〃
+            </summary>
+            <param name="messageTemplateQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Monitor.AuditingController">
+            <summary>
+            瀹¤鏃ュ織绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.AuditingController.Query(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            瀹¤鍒楄〃
+            </summary>
+            <param name="logQueryCriteria">鏌ヨ瀵硅薄</param>
+            <param name="pagination">鍒嗛〉瀵硅薄</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.AuditingController.FindListByCurrent(MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            褰撳墠鐢ㄦ埛琛屼负
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Monitor.ExceptionLogController">
+            <summary>
+            寮傚父鏃ュ織绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.ExceptionLogController.Query(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅寮傚父鏃ュ織鍒楄〃
+            </summary>
+            <param name="logQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Monitor.OnlineUserController">
+            <summary>
+            在线用户
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.OnlineUserController.Query(MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            在线用户列表
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.OnlineUserController.DropOut(MHZNet.DTO.Queries.Common.IdCollectionString)">
+            <summary>
+            强制登出用户
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Monitor.OnlineUserController.Download">
+            <summary>
+            导出在线用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Monitor.ServerResourcesController">
+            <summary>
+            鏈嶅姟鍣ㄧ鐞?/// </summary>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.ApisController">
+            <summary>
+            Apis管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.ApisController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto)">
+            <summary>
+            新增Api
+            </summary>
+            <param name="createUpdateApisDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.ApisController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto)">
+            <summary>
+            更新Api
+            </summary>
+            <param name="createUpdateApisDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.ApisController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            删除Api
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.ApisController.Query(MHZNet.DTO.Queries.Permission.ApisQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查看Apis列表
+            </summary>
+            <param name="apisQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.ApisController.RefreshApis">
+            <summary>
+            刷新Api列表 只实现了新增的api添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.DeptController">
+            <summary>
+            閮ㄩ棬绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
+            <summary>
+            鏂板閮ㄩ棬
+            </summary>
+            <param name="createUpdateDepartmentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
+            <summary>
+            鏇存柊閮ㄩ棬
+            </summary>
+            <param name="createUpdateDepartmentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎閮ㄩ棬
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Query(MHZNet.DTO.Queries.Permission.DeptQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅閮ㄩ棬鍒楄〃
+            </summary>
+            <param name="deptQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.Download(MHZNet.DTO.Queries.Permission.DeptQueryCriteria)">
+            <summary>
+            瀵煎嚭閮ㄩ棬
+            </summary>
+            <param name="deptQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.DeptController.GetSuperior(System.Int64)">
+            <summary>
+            鑾峰彇鍚岀骇涓庣埗绾ч儴闂?    /// </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.JobController">
+            <summary>
+            宀椾綅绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
+            <summary>
+            鏂板宀椾綅
+            </summary>
+            <param name="createUpdateJobDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
+            <summary>
+            鏇存柊宀椾綅
+            </summary>
+            <param name="createUpdateJobDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎宀椾綅
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.Query(MHZNet.DTO.Queries.Permission.JobQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅宀椾綅鍒楄〃
+            </summary>
+            <param name="jobQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.QueryAll">
+            <summary>
+            鑾峰彇鎵€鏈夊矖浣?    /// </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.JobController.Download(MHZNet.DTO.Queries.Permission.JobQueryCriteria)">
+            <summary>
+            瀵煎嚭宀椾綅
+            </summary>
+            <param name="jobQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.MenusController">
+            <summary>
+            鑿滃崟绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Create(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
+            <summary>
+            鏂板鑿滃崟
+            </summary>
+            <param name="createUpdateMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Update(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
+            <summary>
+            鏇存柊鑿滃崟
+            </summary>
+            <param name="createUpdateMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎鑿滃崟
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Build">
+            <summary>
+            鏋勫缓鏍戝舰鑿滃崟
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.GetMenuLazy(System.Int64)">
+            <summary>
+            鑾峰彇瀛愯彍鍗?    /// </summary>
+            <param name="pid">鐖剁骇ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Query(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
+            <summary>
+            鏌ョ湅鑿滃崟鍒楄〃
+            </summary>
+            <param name="menuQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.Download(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
+            <summary>
+            瀵煎嚭鑿滃崟
+            </summary>
+            <param name="menuQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.MenusController.GetSuperior(System.Int64)">
+            <summary>
+            鑾峰彇鍚岀骇涓庝笂绾ц彍鍗?    /// </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.PermissionsController">
+            <summary>
+            瑙掕壊鎺堟潈绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.QueryAllMenus">
+            <summary>
+            鏌ヨ鎵€鏈夎彍鍗?    /// </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.QueryAllApis">
+            <summary>
+            鏌ヨ鎵€鏈堿pi
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.UpdateRolesMenus(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto)">
+            <summary>
+            鏇存柊瑙掕壊鑿滃崟鍏宠仈
+            </summary>
+            <param name="updateRoleMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.PermissionsController.UpdateRolesApis(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto)">
+            <summary>
+            鏇存柊瑙掕壊Api鍏宠仈
+            </summary>
+            <param name="updateRoleApiDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.RoleController">
+            <summary>
+            瑙掕壊绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.#ctor(MHZNet.IBusiness.Permission.IRoleService)">
+            <summary>
+            
+            </summary>
+            <param name="roleService"></param>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Create(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
+            <summary>
+            娣诲姞瑙掕壊
+            </summary>
+            <param name="createUpdateRoleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Update(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
+            <summary>
+            鏇存柊瑙掕壊
+            </summary>
+            <param name="createUpdateRoleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎瑙掕壊
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.QuerySingle(System.Int64)">
+            <summary>
+            鏌ョ湅鍗曚竴瑙掕壊
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Query(MHZNet.DTO.Queries.Permission.RoleQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅瑙掕壊鍒楄〃
+            </summary>
+            <param name="roleQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.Download(MHZNet.DTO.Queries.Permission.RoleQueryCriteria)">
+            <summary>
+            瀵煎嚭瑙掕壊鍒楄〃
+            </summary>
+            <param name="roleQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.QueryAll">
+            <summary>
+            鑾峰彇鍏ㄩ儴瑙掕壊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.RoleController.GetRoleLevel(System.Nullable{System.Int32})">
+            <summary>
+            鑾峰彇褰撳墠鐢ㄦ埛瑙掕壊绛夌骇
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Permission.UserController">
+            <summary>
+            鐢ㄦ埛绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.UserController.Create(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
+            <summary>
+            鏂板鐢ㄦ埛
+            </summary>
+            <param name="createUpdateUserDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.UserController.Update(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
+            <summary>
+            鏇存柊鐢ㄦ埛
+            </summary>
+            <param name="createUpdateUserDto"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.UserController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎鐢ㄦ埛
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.UserController.Query(MHZNet.DTO.Queries.Permission.UserQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅鐢ㄦ埛鍒楄〃
+            </summary>
+            <param name="userQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Permission.UserController.Download(MHZNet.DTO.Queries.Permission.UserQueryCriteria)">
+            <summary>
+            瀵煎嚭鐢ㄦ埛鍒楄〃
+            </summary>
+            <param name="userQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Queued.QueuedEmailController">
+            <summary>
+            邮件队列管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Queued.QueuedEmailController.Create(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="createUpdateQueuedEmailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Queued.QueuedEmailController.Update(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateQueuedEmailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Queued.QueuedEmailController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            删除
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Queued.QueuedEmailController.Query(MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            列表
+            </summary>
+            <param name="queuedEmailQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.AppSecretController">
+            <summary>
+            搴旂敤瀵嗛挜绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.AppSecretController.Create(MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto)">
+            <summary>
+            鏂板搴旂敤瀵嗛挜
+            </summary>
+            <param name="createUpdateAppSecretDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.AppSecretController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto)">
+            <summary>
+            鏇存柊搴旂敤瀵嗛挜
+            </summary>
+            <param name="createUpdateAppSecretDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.AppSecretController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎搴旂敤瀵嗛挜
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.AppSecretController.Query(MHZNet.DTO.Queries.System.AppsecretQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鑾峰彇搴旂敤瀵嗛挜鍒楄〃
+            </summary>
+            <param name="appsecretQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.AppSecretController.Download(MHZNet.DTO.Queries.System.AppsecretQueryCriteria)">
+            <summary>
+            瀵煎嚭搴旂敤瀵嗛挜
+            </summary>
+            <param name="appsecretQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.DictController">
+            <summary>
+            瀛楀吀绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictController.Create(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto)">
+            <summary>
+            鏂板瀛楀吀
+            </summary>
+            <param name="createUpdateDictDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictController.Update(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto)">
+            <summary>
+            鏇存柊瀛楀吀
+            </summary>
+            <param name="createUpdateDictDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎瀛楀吀
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictController.Query(MHZNet.DTO.Queries.System.DictQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ョ湅瀛楀吀鍒楄〃
+            </summary>
+            <param name="dictQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictController.Download(MHZNet.DTO.Queries.System.DictQueryCriteria)">
+            <summary>
+            瀵煎嚭瀛楀吀
+            </summary>
+            <param name="dictQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.DictDetailController">
+            <summary>
+            字典详情管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictDetailController.Create(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto)">
+            <summary>
+            新增字典详情
+            </summary>
+            <param name="createUpdateDictDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictDetailController.Update(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto)">
+            <summary>
+            更新字典详情
+            </summary>
+            <param name="createUpdateDictDetailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictDetailController.Delete(System.Int64)">
+            <summary>
+            删除字典详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.DictDetailController.Query(MHZNet.DTO.Queries.System.DictDetailQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查看字典详情列表
+            </summary>
+            <param name="dictDetailQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.FileRecordController">
+            <summary>
+            鏂囦欢瀛樺偍绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Upload(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            鏂板鏂囦欢
+            </summary>
+            <param name="file"></param>
+            <param name="createUpdateFileRecordDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto)">
+            <summary>
+            鏇存柊鏂囦欢鎻忚堪
+            </summary>
+            <param name="createUpdateAppSecretDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎鏂囦欢
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Query(MHZNet.DTO.Queries.System.FileRecordQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鑾峰彇鏂囦欢鍒楄〃
+            </summary>
+            <param name="fileRecordQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.FileRecordController.Download(MHZNet.DTO.Queries.System.FileRecordQueryCriteria)">
+            <summary>
+            瀵煎嚭鏂囦欢璁板綍
+            </summary>
+            <param name="fileRecordQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.QuartzNetController">
+            <summary>
+            作业调度管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Create(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
+            <summary>
+            新增作业
+            </summary>
+            <param name="createUpdateQuartzNetDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
+            <summary>
+            更新作业
+            </summary>
+            <param name="createUpdateQuartzNetDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            删除作业
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Query(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            获取作业调度任务列表
+            </summary>
+            <param name="quartzNetQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Download(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria)">
+            <summary>
+            导出作业调度
+            </summary>
+            <param name="quartzNetQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Execute(System.Int64)">
+            <summary>
+            执行作业
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Pause(System.Int64)">
+            <summary>
+            暂停作业
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Resume(System.Int64)">
+            <summary>
+            恢复作业
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.QueryLog(MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            作业调度执行日志
+            </summary>
+            <param name="quartzNetLogQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.QuartzNetController.Download(MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria)">
+            <summary>
+            导出作业日志
+            </summary>
+            <param name="quartzNetLogQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.SettingController">
+            <summary>
+            鍏ㄥ眬璁剧疆绠＄悊
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.SettingController.Create(MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto)">
+            <summary>
+            鏂板璁剧疆
+            </summary>
+            <param name="createUpdateSettingDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.SettingController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto)">
+            <summary>
+            鏇存柊璁剧疆
+            </summary>
+            <param name="createUpdateSettingDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.SettingController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            鍒犻櫎璁剧疆
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.SettingController.Query(MHZNet.DTO.Queries.System.SettingQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鑾峰彇璁剧疆鍒楄〃
+            </summary>
+            <param name="settingQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.SettingController.Download(MHZNet.DTO.Queries.System.SettingQueryCriteria)">
+            <summary>
+            瀵煎嚭璁剧疆
+            </summary>
+            <param name="settingQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.System.TenantController">
+            <summary>
+            租户管理
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.Create(MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto)">
+            <summary>
+            新增租户
+            </summary>
+            <param name="createUpdateTenantDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.Update(MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto)">
+            <summary>
+            更新租户
+            </summary>
+            <param name="createUpdateTenantDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.Delete(MHZNet.DTO.Queries.Common.IdCollection)">
+            <summary>
+            删除租户
+            </summary>
+            <param name="idCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.Query(MHZNet.DTO.Queries.System.TenantQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            获取租户列表
+            </summary>
+            <param name="tenantQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.QueryAll">
+            <summary>
+            获取所有租户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.System.TenantController.Download(MHZNet.DTO.Queries.System.TenantQueryCriteria)">
+            <summary>
+            导出租户
+            </summary>
+            <param name="tenantQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Api.Controllers.Test.TestController">
+            <summary>
+            测试
+            </summary>
+        </member>
+        <member name="M:MHZNet.Api.Controllers.Test.TestController.TestSign">
+            <summary>
+            签名测试
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

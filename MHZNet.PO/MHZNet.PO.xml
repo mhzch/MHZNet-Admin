@@ -1,0 +1,1228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MHZNet.PO</name>
+    </assembly>
+    <members>
+        <member name="T:MHZNet.PO.Base.BaseEntity">
+            <summary>
+            瀹炰綋鍩虹被
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntity.CreateBy">
+            <summary>
+            鍒涘缓鑰呭悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntity.CreateTime">
+            <summary>
+            鍒涘缓鏃堕棿
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntity.UpdateBy">
+            <summary>
+            鏇存柊鑰呭悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntity.UpdateTime">
+            <summary>
+            鏈€鍚庢洿鏂版椂闂?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntity.IsDeleted">
+            <summary>
+            鏄惁宸插垹闄?        /// </summary>
+        </member>
+        <member name="T:MHZNet.PO.Base.BaseEntityDto`1">
+            <summary>
+            实体基类
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.CreateBy">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.UpdateBy">
+            <summary>
+            更新者名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.UpdateTime">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityDto`1.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Base.BaseEntityNoDataScope">
+            <summary>
+            实体基类 无数据权限检查
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityNoDataScope.CreateBy">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityNoDataScope.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityNoDataScope.UpdateBy">
+            <summary>
+            更新者名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityNoDataScope.UpdateTime">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.BaseEntityNoDataScope.IsDeleted">
+            <summary>
+            是否已删除
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Base.RootKey`1">
+            <summary>
+            泛型主键
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="P:MHZNet.PO.Base.RootKey`1.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Base.SerilogBase">
+            <summary>
+            Serilog日志基类
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.CreateBy">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.MessageTemplate">
+            <summary>
+            消息模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Base.SerilogBase.Properties">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Message.Email.EmailAccount">
+            <summary>
+            閭欢璐︽埛
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.Email">
+             <summary>
+            鐢靛瓙閭欢鍦板潃
+             </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.DisplayName">
+            <summary>
+            鐢靛瓙閭欢鏄剧ず鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.Host">
+            <summary>
+            鐢靛瓙閭欢涓绘満
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.Port">
+            <summary>
+            鐢靛瓙閭欢绔彛
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.Username">
+            <summary>
+            鐢靛瓙閭欢鐢ㄦ埛鍚?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.Password">
+            <summary>
+            鐢靛瓙閭欢瀵嗙爜
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.EnableSsl">
+            <summary>
+            鏄惁SSL
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailAccount.UseDefaultCredentials">
+            <summary>
+            鏄惁涓庤姹備竴璧峰彂閫佸簲鐢ㄧ▼搴忕殑榛樿绯荤粺鍑嵁
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Message.Email.EmailMessageTemplate">
+            <summary>
+            閭欢妯℃澘
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.Name">
+            <summary>
+            妯℃澘鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.BccEmailAddresses">
+            <summary>
+            鎶勯€侀偖绠卞湴鍧€
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.Subject">
+            <summary>
+            涓婚
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.Body">
+            <summary>
+            鍐呭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.IsActive">
+            <summary>
+            鏄惁婵€娲?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Message.Email.EmailMessageTemplate.EmailAccountId">
+            <summary>
+            閭璐︽埛鏍囪瘑绗?        /// </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Apis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Apis.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Apis.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Apis.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Apis.Method">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Department">
+            <summary>
+            閮ㄩ棬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.Name">
+            <summary>
+            閮ㄩ棬鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.ParentId">
+            <summary>
+            鐖剁骇閮ㄩ棬ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.Sort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.SubCount">
+            <summary>
+            瀛愯妭鐐逛釜鏁?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.Users">
+            <summary>
+            鐢ㄦ埛鍒楄〃
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Department.Roles">
+            <summary>
+            鐢ㄦ埛闆嗗悎
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Job">
+            <summary>
+            宀椾綅
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Job.Name">
+            <summary>
+            鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Job.Sort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Job.Enabled">
+            <summary>
+            鏄惁婵€娲?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Job.Users">
+            <summary>
+            鐢ㄦ埛鍒楄〃
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Menu">
+            <summary>
+            绯荤粺鑿滃崟
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Title">
+            <summary>
+            鑿滃崟鏍囬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Path">
+            <summary>
+            缁勪欢璺緞
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Permission">
+            <summary>
+            鏉冮檺鏍囪瘑绗?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.IFrame">
+            <summary>
+            鏄惁iframe
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Component">
+            <summary>
+            缁勪欢
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.ComponentName">
+            <summary>
+            缁勪欢鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.ParentId">
+            <summary>
+            鐖剁骇鑿滃崟ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Sort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Icon">
+            <summary>
+            icon鍥炬爣
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Type">
+            <summary>
+            鑿滃崟绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Cache">
+            <summary>
+            鏄惁缂撳瓨
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Hidden">
+            <summary>
+            鏄惁闅愯棌
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.SubCount">
+            <summary>
+            瀛愯妭鐐逛釜鏁?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Menu.Children">
+            <summary>
+            瀛愯彍鍗曢泦鍚?        /// </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Role.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Level">
+            <summary>
+            角色等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.DataScopeType">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Permission">
+            <summary>
+            角色代码
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.MenuList">
+            <summary>
+            菜单集合
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.DepartmentList">
+            <summary>
+            部门集合
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.Role.Apis">
+            <summary>
+            菜单集合
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Role.RoleApis">
+            <summary>
+            角色Apis关联
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleApis.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleApis.ApisId">
+            <summary>
+            api ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Role.RoleDepartment">
+            <summary>
+            角色部门关联
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleDepartment.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleDepartment.DeptId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.Role.RoleMenu">
+            <summary>
+            角色菜单关联
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleMenu.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.Role.RoleMenu.MenuId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.User.User">
+            <summary>
+            绯荤粺鐢ㄦ埛
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Username">
+            <summary>
+            鐢ㄦ埛鍚?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.NickName">
+            <summary>
+            鏄电О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Email">
+            <summary>
+            閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.IsAdmin">
+            <summary>
+            鏄惁鍐呯疆绠＄悊鍛?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Enabled">
+            <summary>
+            鏄惁婵€娲?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Password">
+            <summary>
+            瀵嗙爜
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.DeptId">
+            <summary>
+            閮ㄩ棬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Phone">
+            <summary>
+            鐢佃瘽
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.AvatarPath">
+            <summary>
+            澶村儚璺緞
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.PasswordReSetTime">
+            <summary>
+            鏈€鍚庝慨鏀瑰瘑鐮佹椂闂?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Gender">
+            <summary>
+            鎬у埆
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.TenantId">
+            <summary>
+            绉熸埛ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Dept">
+            <summary>
+            閮ㄩ棬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Roles">
+            <summary>
+            瑙掕壊闆嗗悎
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Jobs">
+            <summary>
+            宀椾綅闆嗗悎
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.User.Tenant">
+            <summary>
+            绉熸埛
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.User.UserJob">
+            <summary>
+            用户岗位关联
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.UserJob.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.UserJob.JobId">
+            <summary>
+            岗位ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Permission.User.UserRole">
+            <summary>
+            用户角色关联
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.UserRole.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Permission.User.UserRole.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.Queued.QueuedEmail">
+            <summary>
+            閭欢闃熷垪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.From">
+            <summary>
+            鍙戜欢閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.FromName">
+            <summary>
+            鍙戜欢浜哄悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.To">
+            <summary>
+            鏀朵欢閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.ToName">
+            <summary>
+            鏀朵欢浜哄悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.ReplyTo">
+            <summary>
+            鍥炲閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.ReplyToName">
+            <summary>
+            鍥炲浜哄悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.Priority">
+            <summary>
+            浼樺厛绾?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.Cc">
+            <summary>
+            鎶勯€?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.Bcc">
+            <summary>
+            瀵嗕欢鎶勯€?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.Subject">
+            <summary>
+            鏍囬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.Body">
+            <summary>
+            鍐呭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.SentTries">
+            <summary>
+            鍙戦€佷笂闄愭鏁?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.IsSend">
+            <summary>
+            鏄惁宸插彂閫?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.SendTime">
+            <summary>
+            鍙戦€佹椂闂?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.Queued.QueuedEmail.EmailAccountId">
+            <summary>
+            鍙戜欢閭ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.AppSecret">
+            <summary>
+            三方应用密钥
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.AppSecret.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.AppSecret.AppSecretKey">
+            <summary>
+            应用秘钥
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.AppSecret.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.AppSecret.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.Dict.Dict">
+            <summary>
+            瀛楀吀
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.Dict.DictType">
+            <summary>
+            瀛楀吀绫诲瀷
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.Dict.Name">
+            <summary>
+            瀛楀吀鍚嶇О
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.Dict.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.Dict.DictDetails">
+            <summary>
+            瀛楀吀璇︽儏
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.Dict.DictDetail">
+            <summary>
+            瀛楀吀璇︽儏
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.DictDetail.DictId">
+            <summary>
+            瀛楀吀ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.DictDetail.Label">
+            <summary>
+            瀛楀吀鏍囩
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.DictDetail.Value">
+            <summary>
+            瀛楀吀鍊?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Dict.DictDetail.DictSort">
+            <summary>
+            鎺掑簭
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.FileRecord">
+            <summary>
+            鏂囦欢璁板綍
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.Description">
+            <summary>
+            鏂囦欢鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.ContentType">
+            <summary>
+            鏂囦欢绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.ContentTypeName">
+            <summary>
+            鏂囦欢绫诲埆
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.ContentTypeNameEn">
+            <summary>
+            鏂囦欢绫诲埆鑻辨枃鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.OriginalName">
+            <summary>
+            鏂囦欢鍘熷悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.NewName">
+            <summary>
+            鏂囦欢鏂板悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.FilePath">
+            <summary>
+            鏂囦欢瀛樺偍璺緞
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.FileRecord.Size">
+            <summary>
+            鏂囦欢澶у皬
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.QuartzNet.QuartzNet">
+            <summary>
+            绯荤粺浣滀笟璋冨害
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.TaskName">
+            <summary>
+            浠诲姟鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.TaskGroup">
+            <summary>
+            浠诲姟鍒嗙粍
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.Cron">
+            <summary>
+            cron 琛ㄨ揪寮?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.AssemblyName">
+            <summary>
+            绋嬪簭闆嗗悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.ClassName">
+            <summary>
+            浠诲姟鎵€鍦ㄧ被
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.Description">
+            <summary>
+            浠诲姟鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.Principal">
+            <summary>
+            浠诲姟璐熻矗浜?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.AlertEmail">
+            <summary>
+            鍛婅閭
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.PauseAfterFailure">
+            <summary>
+            浠诲姟澶辫触鍚庢槸鍚︽殏鍋?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.RunTimes">
+            <summary>
+            鎵ц娆℃暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.StartTime">
+            <summary>
+            寮€濮嬫椂闂?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.EndTime">
+            <summary>
+            缁撴潫鏃堕棿
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.TriggerType">
+            <summary>
+            瑙﹀彂鍣ㄧ被鍨嬶紙0銆乻imple 1銆乧ron锛?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.IntervalSecond">
+            <summary>
+            鎵ц闂撮殧鏃堕棿, 绉掍负鍗曚綅
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.CycleRunTimes">
+            <summary>
+            寰幆鎵ц娆℃暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.IsEnable">
+            <summary>
+            鏄惁鍚姩
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.RunParams">
+            <summary>
+            鎵ц浼犲弬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNet.TriggerStatus">
+            <summary>
+            瑙﹀彂鍣ㄧ姸鎬?        /// </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog">
+            <summary>
+            绯荤粺浣滀笟璋冨害鎵ц鏃ュ織
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.TaskId">
+            <summary>
+            浠诲姟Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.TaskName">
+            <summary>
+            浠诲姟鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.TaskGroup">
+            <summary>
+            浠诲姟鍒嗙粍
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.AssemblyName">
+            <summary>
+            绋嬪簭闆嗗悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.ClassName">
+            <summary>
+            浠诲姟鎵€鍦ㄧ被
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.Cron">
+            <summary>
+            cron 琛ㄨ揪寮?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.ExceptionDetail">
+            <summary>
+            寮傚父璇︽儏
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.ExecutionDuration">
+            <summary>
+            鎵ц鑰楁椂锛堟绉掞級
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.RunParams">
+            <summary>
+            鎵ц浼犲弬
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.QuartzNet.QuartzNetLog.IsSuccess">
+            <summary>
+            鏄惁鎴愬姛
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.Setting">
+            <summary>
+            绯荤粺璁剧疆
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Setting.Name">
+            <summary>
+            鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Setting.Value">
+            <summary>
+            鍊?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Setting.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Setting.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.Tenant">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.ConfigId">
+            <summary>
+            库Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.DbType">
+            <summary>
+            数据库类型<br/>
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.ConnectionString">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.Tenant.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Core.System.TokenBlacklist">
+            <summary>
+            Token黑名单
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Core.System.TokenBlacklist.AccessToken">
+            <summary>
+            令牌 登录token的MD5值
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.AopSqlLog">
+            <summary>
+            SQL日志
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.AuditLog">
+            <summary>
+            瀹¤鏃ュ織
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Area">
+            <summary>
+            鍖哄煙
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Controller">
+            <summary>
+            鎺у埗鍣?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Action">
+            <summary>
+            鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Method">
+            <summary>
+            璇锋眰鏂瑰紡
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Description">
+            <summary>
+            /鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.RequestUrl">
+            <summary>
+            璇锋眰url
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.RequestParameters">
+            <summary>
+            璇锋眰鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.ResponseData">
+            <summary>
+            鍝嶅簲鏁版嵁
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.ExecutionDuration">
+            <summary>
+            鎵ц鑰楁椂(姣)
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.RequestIp">
+            <summary>
+            璇锋眰IP
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.IpAddress">
+            <summary>
+            IP鎵€灞炵湡瀹炲湴鍧€
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.OperatingSystem">
+            <summary>
+            鎿嶄綔绯荤粺
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.DeviceType">
+            <summary>
+            璁惧绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.BrowserName">
+            <summary>
+            娴忚鍣ㄥ悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.Version">
+            <summary>
+            娴忚鍣ㄧ増鏈?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.AuditLog.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.ErrorLog">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.ExceptionLog">
+            <summary>
+            寮傚父鏃ュ織
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Area">
+            <summary>
+            鍖哄煙
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Controller">
+            <summary>
+            鎺у埗鍣?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Action">
+            <summary>
+            鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Method">
+            <summary>
+            璇锋眰鏂瑰紡
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.RequestUrl">
+            <summary>
+            璇锋眰url
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.RequestParameters">
+            <summary>
+            璇锋眰鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.ExceptionMessage">
+            <summary>
+            寮傚父鐭俊鎭?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.ExceptionMessageFull">
+            <summary>
+            寮傚父瀹屾暣淇℃伅
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.ExceptionStack">
+            <summary>
+            寮傚父鍫嗘爤淇℃伅
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.LogLevel">
+            <summary>
+            绛夌骇
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.RequestIp">
+            <summary>
+            璇锋眰ip
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.IpAddress">
+            <summary>
+            ip鎵€灞炵湡瀹炲湴鍧€
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.OperatingSystem">
+            <summary>
+            鎿嶄綔绯荤粺
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.DeviceType">
+            <summary>
+            璁惧绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.BrowserName">
+            <summary>
+            娴忚鍣ㄥ悕绉?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.Version">
+            <summary>
+            娴忚鍣ㄧ増鏈?        /// </summary>
+        </member>
+        <member name="P:MHZNet.PO.Logs.ExceptionLog.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.FatalLog">
+            <summary>
+            失败日志
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.InformationLog">
+            <summary>
+            信息日志
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Logs.WarningLog">
+            <summary>
+            警告日志
+            </summary>
+        </member>
+        <member name="T:MHZNet.PO.Test.TestOrder">
+            <summary>
+            多租户测试
+            单表ID隔离注释[MultiDbTenant]，继承ITenantEntity
+            多库隔离取消继承ITenantEntity，增加[MultiDbTenant]
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Test.TestOrder.OrderNo">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Test.TestOrder.GoodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Test.TestOrder.Qty">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Test.TestOrder.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:MHZNet.PO.Test.TestOrder.TenantId">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

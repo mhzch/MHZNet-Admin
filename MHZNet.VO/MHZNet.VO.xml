@@ -1,0 +1,2310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MHZNet.VO</name>
+    </assembly>
+    <members>
+        <member name="T:MHZNet.VO.Core.Message.Email.EmailAccountVo">
+            <summary>
+            邮箱账户Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.Email">
+             <summary>
+            电子邮件地址
+             </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.DisplayName">
+            <summary>
+            电子邮件显示名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.Host">
+            <summary>
+            电子邮件主机
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.Port">
+            <summary>
+            电子邮件端口
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.Username">
+            <summary>
+            电子邮件用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.Password">
+            <summary>
+            电子邮件密码
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.EnableSsl">
+            <summary>
+            是否SSL
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailAccountVo.UseDefaultCredentials">
+            <summary>
+            是否与请求一起发送应用程序的默认系统凭据
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo">
+            <summary>
+            邮箱模板Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.BccEmailAddresses">
+            <summary>
+            抄送邮箱地址
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.Subject">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.Body">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.IsActive">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Message.Email.EmailMessageTemplateVo.EmailAccountId">
+            <summary>
+            发送邮箱账户
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Monitor.AuditLogVo">
+            <summary>
+            瀹¤鏃ュ織Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Area">
+            <summary>
+            鍖?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Controller">
+            <summary>
+            鎺у埗鍣?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Action">
+            <summary>
+            鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Method">
+            <summary>
+            璇锋眰鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.RequestUrl">
+            <summary>
+            璇锋眰Url
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.RequestParameters">
+            <summary>
+            璇锋眰鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.ResponseData">
+            <summary>
+            鐩稿簲缁撴灉
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.ExecutionDuration">
+            <summary>
+            鎵ц鑰楁椂(姣)
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.RequestIp">
+            <summary>
+            璇锋眰IP
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.IpAddress">
+            <summary>
+            IP鍦板潃
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.OperatingSystem">
+            <summary>
+            鎿嶄綔绯荤粺
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.DeviceType">
+            <summary>
+            璁惧绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.BrowserName">
+            <summary>
+            娴忚鍣ㄥ悕绉?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.AuditLogVo.Version">
+            <summary>
+            鐗堟湰鍙?    /// </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Monitor.ExceptionLogVo">
+            <summary>
+            绯荤粺寮傚父Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Area">
+            <summary>
+            鍖?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Controller">
+            <summary>
+            鎺у埗鍣?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Action">
+            <summary>
+            鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Method">
+            <summary>
+            璇锋眰鏂规硶
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.RequestUrl">
+            <summary>
+            璇锋眰Url
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.RequestParameters">
+            <summary>
+            璇锋眰鍙傛暟
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.ExceptionMessage">
+            <summary>
+            寮傚父娑堟伅
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.ExceptionMessageFull">
+            <summary>
+            寮傚父瀹屾暣娑堟伅
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.ExceptionStack">
+            <summary>
+            寮傚父鍫嗘爤淇℃伅
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.LogLevel">
+            <summary>
+            鏃ュ織绛夌骇
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.RequestIp">
+            <summary>
+            璇锋眰IP
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.IpAddress">
+            <summary>
+            IP鍦板潃
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.OperatingSystem">
+            <summary>
+            鎿嶄綔绯荤粺
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.DeviceType">
+            <summary>
+            璁惧绫诲瀷
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.BrowserName">
+            <summary>
+            娴忚鍣ㄥ悕绉?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Monitor.ExceptionLogVo.Version">
+            <summary>
+            鐗堟湰鍙?    /// </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.ApisVo">
+            <summary>
+            Api路由 Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.ApisVo.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.ApisVo.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.ApisVo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.ApisVo.Method">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Department.DepartmentSmallVo">
+            <summary>
+            部门Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentSmallVo.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentSmallVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Department.DepartmentVo">
+            <summary>
+            部门Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.SubCount">
+            <summary>
+            子节点个数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.HasChildren">
+            <summary>
+            是否有子节点
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Leaf">
+            <summary>
+            页
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Department.DepartmentVo.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Job.JobSmallDto">
+            <summary>
+            岗位Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Job.JobSmallDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Job.JobSmallDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Job.JobVo">
+            <summary>
+            岗位Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Job.JobVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Job.JobVo.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Job.JobVo.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Menu.MenuMetaVo">
+            <summary>
+            菜单Meta
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.Core.Permission.Menu.MenuMetaVo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.Core.Permission.Menu.MenuMetaVo.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="title"></param>
+            <param name="icon"></param>
+            <param name="noCache"></param>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuMetaVo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuMetaVo.Icon">
+            <summary>
+            Icon
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuMetaVo.NoCache">
+            <summary>
+            不缓存
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Menu.MenuTreeVo">
+            <summary>
+            菜单视图  构建菜单树
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Hidden">
+            <summary>
+            印象
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Redirect">
+            <summary>
+            重定向
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.AlwaysShow">
+            <summary>
+            总是显示
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="F:MHZNet.VO.Core.Permission.Menu.MenuTreeVo.Meta">
+            <summary>
+            Meta
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Menu.MenuVo">
+            <summary>
+            菜单Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Permission">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.IFrame">
+            <summary>
+            是否IFrame
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Icon">
+            <summary>
+            Icon
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Cache">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Hidden">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.SubCount">
+            <summary>
+            子节点个数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Leaf">
+            <summary>
+            页
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.HasChildren">
+            <summary>
+            是否有子节点
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Menu.MenuVo.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Role.RoleLevelVo">
+            <summary>
+            角色等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleLevelVo.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Role.RoleMenuVo">
+            <summary>
+            角色菜单Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleMenuVo.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Role.RoleSmallVo">
+            <summary>
+            角色Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleSmallVo.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleSmallVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleSmallVo.Permission">
+            <summary>
+            权限标识符
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleSmallVo.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleSmallVo.DataScopeType">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.Role.RoleVo">
+            <summary>
+            角色Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.DataScopeType">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.Permission">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.MenuList">
+            <summary>
+            菜单列表
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.DepartmentList">
+            <summary>
+            部门列表
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.Role.RoleVo.Apis">
+            <summary>
+            菜单列表
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.User.UserDeptVo">
+            <summary>
+            用户部门Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserDeptVo.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.User.UserJobDto">
+            <summary>
+            用户岗位Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserJobDto.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserJobDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.User.UserRoleVo">
+            <summary>
+            用户角色Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserRoleVo.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserRoleVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Permission.User.UserVo">
+            <summary>
+            用户Vo
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.Core.Permission.User.UserVo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.IsAdmin">
+            <summary>
+            内置管理员
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.DeptId">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.AvatarPath">
+            <summary>
+            头像文件路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.PasswordReSetTime">
+            <summary>
+            最后修改密码时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Roles">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Dept">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Jobs">
+            <summary>
+            岗位列表
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Permission.User.UserVo.Tenant">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.Queued.QueuedEmailVo">
+            <summary>
+            邮件队列Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.From">
+            <summary>
+            发件邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.FromName">
+            <summary>
+            发件人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.To">
+            <summary>
+            收件邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.ToName">
+            <summary>
+            收件人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.ReplyTo">
+            <summary>
+            回复邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.ReplyToName">
+            <summary>
+            回复人名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.Cc">
+            <summary>
+            抄送
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.Bcc">
+            <summary>
+            密件抄送
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.Subject">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.Body">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.SentTries">
+            <summary>
+            发送上限次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.IsSend">
+            <summary>
+            是否已发送
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.SendTime">
+            <summary>
+            发送时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.Queued.QueuedEmailVo.EmailAccountId">
+            <summary>
+            发件邮箱ID
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.AppSecretVo">
+            <summary>
+            应用密钥Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.AppSecretVo.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.AppSecretVo.AppSecretKey">
+            <summary>
+            签名Key
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.AppSecretVo.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.AppSecretVo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.Dict.DictDetailVo">
+            <summary>
+            字典详情Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictDetailVo.DictId">
+            <summary>
+            字典ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictDetailVo.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictDetailVo.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictDetailVo.DictSort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.Dict.DictVo">
+            <summary>
+            字典Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictVo.DictType">
+            <summary>
+            字典类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictVo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.Dict.DictVo.DictDetails">
+            <summary>
+            字典详情
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.FileRecordVo">
+            <summary>
+            文件记录Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.ContentType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.ContentTypeName">
+            <summary>
+            文件类型名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.ContentTypeNameEn">
+            <summary>
+            文件类型名称(EN)
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.OriginalName">
+            <summary>
+            源名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.NewName">
+            <summary>
+            新名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.FilePath">
+            <summary>
+            存储路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.FileRecordVo.Size">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo">
+            <summary>
+            任务调度日志Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.TaskId">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.TaskGroup">
+            <summary>
+            任务分组
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.AssemblyName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.ClassName">
+            <summary>
+            任务所在类
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.Cron">
+            <summary>
+            cron 表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.ExceptionDetail">
+            <summary>
+            异常详情
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.ExecutionDuration">
+            <summary>
+            执行耗时（毫秒）
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.RunParams">
+            <summary>
+            执行传参
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetLogVo.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo">
+            <summary>
+            任务调度Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.TaskGroup">
+            <summary>
+            任务分组
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.Cron">
+            <summary>
+            cron 表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.AssemblyName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.ClassName">
+            <summary>
+            任务所在类
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.Description">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.Principal">
+            <summary>
+            任务负责人
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.AlertEmail">
+            <summary>
+            告警邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.PauseAfterFailure">
+            <summary>
+            任务失败后是否继续
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.RunTimes">
+            <summary>
+            执行次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.TriggerType">
+            <summary>
+            触发器类型（0、simple 1、cron）
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.IntervalSecond">
+            <summary>
+            执行间隔时间, 秒为单位
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.CycleRunTimes">
+            <summary>
+            循环执行次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.IsEnable">
+            <summary>
+            是否启动
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.RunParams">
+            <summary>
+            执行传参
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.QuartzNet.QuartzNetVo.TriggerStatus">
+            <summary>
+            触发器状态
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.SettingVo">
+            <summary>
+            鍏ㄥ眬璁剧疆Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.SettingVo.Name">
+            <summary>
+            鍚嶇О
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.SettingVo.Value">
+            <summary>
+            鍊?    /// </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.SettingVo.Enabled">
+            <summary>
+            鏄惁鍚敤
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.SettingVo.Description">
+            <summary>
+            鎻忚堪
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Core.System.TenantVo">
+            <summary>
+            租户Vo
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.ConfigId">
+            <summary>
+            库Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.DbType">
+            <summary>
+            库类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Core.System.TenantVo.ConnectionString">
+            <summary>
+            库连接
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Jwt.CaptchaVo">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.CaptchaVo.Img">
+            <summary>
+            图片base64
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.CaptchaVo.CaptchaId">
+            <summary>
+            验证码ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.CaptchaVo.ShowCaptcha">
+            <summary>
+            是否显示验证码
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Jwt.JwtUserVo">
+            <summary>
+            JWT令牌用户
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.JwtUserVo.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.JwtUserVo.Roles">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.JwtUserVo.DataScopes">
+            <summary>
+            数据权限
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Jwt.LoginResultVo">
+            <summary>
+            登录结果
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.LoginResultVo.JwtUserVo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.LoginResultVo.TokenVo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Jwt.TokenVo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.TokenVo.AccessToken">
+            <summary>
+            授权token
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.TokenVo.Expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.TokenVo.TokenType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.TokenVo.RefreshToken">
+            <summary>
+            刷新token
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.TokenVo.RefreshTokenExpires">
+            <summary>
+            允许token时间内
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Jwt.UrlAccessControlVo">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.UrlAccessControlVo.Url">
+            <summary>
+            请求路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Jwt.UrlAccessControlVo.Method">
+            <summary>
+            请求方法
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport">
+            <summary>
+            邮箱账户导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.Email">
+             <summary>
+            邮箱
+             </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.DisplayName">
+            <summary>
+            电子邮件显示名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.Host">
+            <summary>
+            电子邮件主机
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.Port">
+            <summary>
+            电子邮件端口
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.Username">
+            <summary>
+            电子邮件用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.Password">
+            <summary>
+            电子邮件密码
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.EnableSsl">
+            <summary>
+            是否SSL
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Message.Email.Account.EmailAccountExport.UseDefaultCredentials">
+            <summary>
+            是否与请求一起发送应用程序的默认系统凭据
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Monitor.OnlineUserExport">
+            <summary>
+            在线用户导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.Account">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.Dept">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.Ip">
+            <summary>
+            登录IP
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.Address">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.OperatingSystem">
+            <summary>
+            操作系统
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.BrowserName">
+            <summary>
+            浏览器名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.LoginTime">
+            <summary>
+            登录时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Monitor.OnlineUserExport.AccessToken">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Permission.DepartmentExport">
+            <summary>
+            部门导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.DepartmentExport.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.DepartmentExport.ParentId">
+            <summary>
+            部门父ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.DepartmentExport.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.DepartmentExport.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.DepartmentExport.SubCount">
+            <summary>
+            子部门个数
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Permission.JobExport">
+            <summary>
+            岗位导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.JobExport.Name">
+            <summary>
+            岗位名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.JobExport.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.JobExport.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Permission.MenuExport">
+            <summary>
+            菜单导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Title">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Path">
+            <summary>
+            组件路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Permission">
+            <summary>
+            权限标识符
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.IsFrame">
+            <summary>
+            是否IFrame
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.PId">
+            <summary>
+            菜单父ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.Icon">
+            <summary>
+            Icon图标
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.MenuType">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.IsCache">
+            <summary>
+            是否缓存
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.IsHidden">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.MenuExport.SubCount">
+            <summary>
+            子菜单个数
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Permission.RoleExport">
+            <summary>
+            角色导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.Level">
+            <summary>
+            角色等级
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.Description">
+            <summary>
+            角色描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.DataScopeType">
+            <summary>
+            数据范围
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.DataDept">
+            <summary>
+            数据部门
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.RoleExport.Permission">
+            <summary>
+            角色代码
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.Permission.UserExport">
+            <summary>
+            用户导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Username">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Role">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Phone">
+            <summary>
+            用户电话
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Email">
+            <summary>
+            用户邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Dept">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Job">
+            <summary>
+            岗位名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.Permission.UserExport.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.AppSecretExport">
+            <summary>
+            密钥导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.AppSecretExport.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.AppSecretExport.AppSecretKey">
+            <summary>
+            应用密钥
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.AppSecretExport.AppName">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.AppSecretExport.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.DictExport">
+            <summary>
+            字典导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.DictExport.DictType">
+            <summary>
+            字典类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.DictExport.Name">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.DictExport.Description">
+            <summary>
+            字典描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.DictExport.Lable">
+            <summary>
+            字典标签
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.DictExport.Value">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.FileRecordExport">
+            <summary>
+            文件记录导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.Description">
+            <summary>
+            文件描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.ContentType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.ContentTypeName">
+            <summary>
+            文件类型名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.ContentTypeNameEn">
+            <summary>
+            文件类型名称(EN)
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.OriginalName">
+            <summary>
+            源名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.NewName">
+            <summary>
+            新名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.FilePath">
+            <summary>
+            存储路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.FileRecordExport.Size">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.QuartzNetExport">
+            <summary>
+            任务调度导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.TaskGroup">
+            <summary>
+            任务分组
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.Cron">
+            <summary>
+            cron 表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.AssemblyName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.ClassName">
+            <summary>
+            任务所在类
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.Description">
+            <summary>
+            任务描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.Principal">
+            <summary>
+            任务负责人
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.AlertEmail">
+            <summary>
+            告警邮箱
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.PauseAfterFailure">
+            <summary>
+            任务失败后是否继续
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.RunTimes">
+            <summary>
+            执行次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.TriggerType">
+            <summary>
+            触发器类型（0、simple 1、cron）
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.IntervalSecond">
+            <summary>
+            执行间隔时间, 秒为单位
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.CycleRunTimes">
+            <summary>
+            循环执行次数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.IsEnable">
+            <summary>
+            是否启动
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.RunParams">
+            <summary>
+            执行传参
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetExport.TriggerStatus">
+            <summary>
+            触发器状态
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.QuartzNetLogExport">
+            <summary>
+            任务调度日志导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.TaskId">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.TaskGroup">
+            <summary>
+            任务组
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.AssemblyName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.ClassName">
+            <summary>
+            执行类
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.Cron">
+            <summary>
+            Cron表达式
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.ExceptionDetail">
+            <summary>
+            异常详情
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.ExecutionDuration">
+            <summary>
+            执行耗时
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.RunParams">
+            <summary>
+            执行传参
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.QuartzNetLogExport.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.SettingExport">
+            <summary>
+            设置导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.SettingExport.Name">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.SettingExport.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.SettingExport.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.SettingExport.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.Report.System.TenantExport">
+            <summary>
+            租户导出模板
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.TenantType">
+            <summary>
+            租户类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.ConfigId">
+            <summary>
+            库Id
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.DbType">
+            <summary>
+            库类型
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.Report.System.TenantExport.ConnectionString">
+            <summary>
+            库连接
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.Cpu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Package">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Core">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.CoreNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Logic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Used">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Cpu.Idle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.Disk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Disk.Total">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Disk.Available">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Disk.Used">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Disk.UsageRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.Memory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Memory.Total">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Memory.Available">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Memory.Used">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Memory.UsageRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.OsInfo">
+            <summary>
+            系统信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.Is64BitOperatingSystem">
+            <summary>
+            确定当前操作系统是否为64位操作系统
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.MachineName">
+            <summary>
+            获取此本地计算机的NetBIOS名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.OsVersion">
+            <summary>
+            获取当前平台标识符和版本号
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.NumberOfCores">
+            <summary>
+            获取当前计算机上的物理处理器核心数量
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.PhysicalProcessorCount">
+            <summary>
+            获取当前计算机上的物理处理器数量
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.LogicProcessorCount">
+            <summary>
+            获取当前计算机上的逻辑处理器数量
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.ProcessorName">
+            <summary>
+            处理器名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.SystemDirectory">
+            <summary>
+            获取系统目录的标准路径
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.SystemPageSize">
+            <summary>
+            获取操作系统的内存页面中的字节数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.TickCount">
+            <summary>
+            获取自系统启动以来经过的毫秒数
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.UserDomainName">
+            <summary>
+            获取与当前用户关联的网络域名
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.UserName">
+            <summary>
+            获取当前登录到操作系统的用户的用户名
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.Version">
+            <summary>
+            获取公共语言运行时的主要，次要，内部和修订版本号
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.FrameworkDescription">
+            <summary>
+            获取运行应用程序的.NET安装的名称
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.OsDescription">
+            <summary>
+            获取描述应用程序正在运行的操作系统的字符串
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.Os">
+            <summary>
+            代表操作系统平台
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.TotalPhysicalMemory">
+            <summary>
+            总物理内存 B
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.FreePhysicalMemory">
+            <summary>
+            可用物理内存 B
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.SwapTotal">
+            <summary>
+            总交换空间（Linux）B
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.SwapFree">
+            <summary>
+            可用交换空间（Linux）B
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.LogicalDisk">
+            <summary>
+            逻辑磁盘
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.OsInfo.LocalIp">
+            <summary>
+            本机IP
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows">
+            <summary>
+            WINDOWS
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.TotalPhysicalMemory">
+            <summary>
+            获取物理内存 B
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.FreePhysicalMemory">
+            <summary>
+            获取可用内存 B
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.LogicalDisk">
+            <summary>
+            获取磁盘信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.ProcessorName">
+            <summary>
+            获取处理器名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.RunTime">
+            <summary>
+            运行时长
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.PhysicalProcessorCount">
+            <summary>
+            物理CPU数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.LogicProcessorCount">
+            <summary>
+            逻辑CPU数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForWindows.NumberOfCores">
+            <summary>
+            物理处理器核心数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux">
+            <summary>
+            Linux系统
+            </summary>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.MemInfo(System.String)">
+            <summary>
+            获取 /proc/meminfo
+            </summary>
+            <param name="pkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.CpuInfo(System.String)">
+            <summary>
+            获取 /proc/cpuinfo
+            </summary>
+            <param name="pkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.LogicalDisk">
+            <summary>
+            获取磁盘信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.CpuLoad">
+            <summary>
+            获取CPU使用率 %
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.RunTime">
+            <summary>
+            运行时长
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.PhysicalProcessorCount">
+            <summary>
+            物理CPU数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.LogicProcessorCount">
+            <summary>
+            逻辑CPU数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.VO.ServerInfo.OsInfo.PlatformForLinux.NumberOfCores">
+            <summary>
+            物理处理器核心数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.DiskInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.ServerResourcesInfo">
+            <summary>
+            服务器资源信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Time">
+            <summary>
+            运行时间
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Sys">
+            <summary>
+            系统信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Cpu">
+            <summary>
+            Cpu信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Memory">
+            <summary>
+            内存信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Swap">
+            <summary>
+            交换区信息
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.ServerResourcesInfo.Disk">
+            <summary>
+            磁盘信息
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.Swap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Swap.Total">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Swap.Used">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Swap.Available">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Swap.UsageRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MHZNet.VO.ServerInfo.Sys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Sys.Os">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Sys.Day">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MHZNet.VO.ServerInfo.Sys.Ip">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+using System;
+
+namespace MHZNet.Common.Attributes;
+
+/// <summary>
+/// ◊‚ªß±Í ∂(ø‚∏Ù¿Î)
+/// </summary>
+[AttributeUsage(AttributeTargets.Class)]
+public class MultiDbTenantAttribute : Attribute
+{
+}

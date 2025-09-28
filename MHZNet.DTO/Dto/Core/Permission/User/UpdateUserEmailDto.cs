@@ -1,0 +1,31 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace MHZNet.DTO.Dto.Core.Permission.User;
+
+/// <summary>
+/// ”√ªß” œ‰Dto
+/// </summary>
+public class UpdateUserEmailDto
+{
+    /// <summary>
+    /// √‹¬Î
+    /// </summary>
+    [Display(Name = "User.Password")]
+    [Required(ErrorMessage = "{0}required")]
+    public string Password { get; set; }
+
+    /// <summary>
+    /// ” œ‰
+    /// </summary>
+    [Display(Name = "Sys.Email")]
+    [Required(ErrorMessage = "{0}required")]
+    [EmailAddress(ErrorMessage = "{0}Error.Format")]
+    public string Email { get; set; }
+
+    /// <summary>
+    /// —È÷§¬Î
+    /// </summary>
+    [Display(Name = "Sys.Captcha")]
+    [Required(ErrorMessage = "{0}required")]
+    public string Code { get; set; }
+}

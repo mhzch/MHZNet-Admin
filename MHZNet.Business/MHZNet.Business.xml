@@ -1,0 +1,1319 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MHZNet.Business</name>
+    </assembly>
+    <members>
+        <member name="T:MHZNet.Business.BaseServices`1">
+            <summary>
+            业务实现基类
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="P:MHZNet.Business.BaseServices`1.SugarRepository">
+            <summary>
+            当前操作对象仓储
+            </summary>
+        </member>
+        <member name="P:MHZNet.Business.BaseServices`1.SugarClient">
+            <summary>
+            sugarClient
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.#ctor(MHZNet.Repository.SugarHandler.ISugarRepository{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sugarRepository"></param>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.AddAsync(`0,System.String)">
+            <summary>
+            添加实体
+            </summary>
+            <param name="entity">实体集合</param>
+            <param name="lockString">锁</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.AddAsync(System.Collections.Generic.List{`0},System.String)">
+            <summary>
+            批量添加实体
+            </summary>
+            <param name="entitys">实体集合</param>
+            <param name="lockString">锁</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.UpdateAsync(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean,System.String)">
+            <summary>
+            更新实体
+            </summary>
+            <param name="entity">实体对象</param>
+            <param name="isUpdateColumns">更新列</param>
+            <param name="ignoreColumns">忽略列</param>
+            <param name="isIgnoreNull">是否忽略NULL列更新</param>
+            <param name="lockString">是否加锁</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.UpdateAsync(System.Collections.Generic.List{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean,System.String)">
+            <summary>
+            批量更新实体
+            </summary>
+            <param name="entitys">实体对象</param>
+            <param name="isUpdateColumns">更新列</param>
+            <param name="ignoreColumns">忽略列</param>
+            <param name="isIgnoreNull">是否忽略NULL列更新</param>
+            <param name="lockString">是否加锁</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.LogicDelete``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            逻辑删除 操作的类需继承ISoftDeletedEntity
+            </summary>
+            <param name="exp"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:MHZNet.Business.BaseServices`1.Table">
+            <summary>
+            Table
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.TableWhere(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Nullable{SqlSugar.OrderByType},System.Boolean,System.String,System.Int32)">
+            <summary>
+            TableWhere
+            </summary>
+            <param name="whereExpression">条件表达式</param>
+            <param name="selectExpression">查询表达式</param>
+            <param name="orderExpression">排序表达式</param>
+            <param name="orderByType">排序方式</param>
+            <param name="isClearCreateByFilter">清除创建人过滤器</param>
+            <param name="lockString">锁</param>
+            <param name="cacheDurationInSeconds">缓存时间(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.TableWhere(System.Collections.Generic.List{SqlSugar.IConditionalModel},System.Linq.Expressions.Expression{System.Func{`0,`0}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Nullable{SqlSugar.OrderByType},System.Boolean,System.String,System.Int32)">
+            <summary>
+            TableWhere
+            </summary>
+            <param name="conditionalModels">条件模型</param>
+            <param name="selectExpression">查询表达式</param>
+            <param name="orderExpression">排序表达式</param>
+            <param name="orderByType">排序方式</param>
+            <param name="isClearCreateByFilter">清除创建人过滤器</param>
+            <param name="lockString">锁</param>
+            <param name="cacheDurationInSeconds">缓存时间(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.BaseServices`1.TablePageAsync(MHZNet.DTO.Queries.Common.QueryOptions{`0})">
+            <summary>
+            表格分页
+            </summary>
+            <param name="queryOptions">查询参数</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:MHZNet.Business.Message.Email.EmailAccountService">
+            <summary>
+            邮箱账户服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailAccountService.CreateAsync(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="createUpdateEmailAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailAccountService.UpdateAsync(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailAccountDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateEmailAccountDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailAccountService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailAccountService.QueryAsync(MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="emailAccountQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailAccountService.DownloadAsync(MHZNet.DTO.Queries.Message.EmailAccountQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="emailAccountQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Message.Email.EmailMessageTemplateService">
+            <summary>
+            邮件消息模板实现
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailMessageTemplateService.CreateAsync(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
+            <summary>
+            新增
+            </summary>
+            <param name="createUpdateEmailMessageTemplateDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailMessageTemplateService.UpdateAsync(MHZNet.DTO.Dto.Core.Message.Email.CreateUpdateEmailMessageTemplateDto)">
+            <summary>
+            修改
+            </summary>
+            <param name="createUpdateEmailMessageTemplateDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailMessageTemplateService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailMessageTemplateService.QueryAsync(MHZNet.DTO.Queries.Message.EmailMessageTemplateQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="messageTemplateQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Message.Email.EmailScheduleTask">
+            <summary>
+            电子邮件任务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailScheduleTask.#ctor(MHZNet.IBusiness.Message.Email.IEmailAccountService,MHZNet.IBusiness.Message.Email.IEmailSender,MHZNet.IBusiness.Queued.IQueuedEmailService,Microsoft.Extensions.Logging.ILogger{MHZNet.Business.Message.Email.EmailScheduleTask})">
+            <summary>
+            
+            </summary>
+            <param name="emailAccountService"></param>
+            <param name="emailSender"></param>
+            <param name="queuedEmailService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailScheduleTask.ExecuteAsync(System.Int64)">
+            <summary>
+            Executes a task
+            </summary>
+        </member>
+        <member name="T:MHZNet.Business.Message.Email.EmailSender">
+            <summary>
+            邮件发送
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailSender.#ctor(MHZNet.IBusiness.Message.Email.ISmtpBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="smtpBuilder"></param>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailSender.CreateMimeAttachment(System.String,System.Byte[],System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Create an file attachment for the binary data
+            </summary>
+            <param name="attachmentFileName">Attachment file name</param>
+            <param name="binaryContent">The array of unsigned bytes from which to create the attachment stream.</param>
+            <param name="cDate">Creation date and time for the specified file or directory</param>
+            <param name="mDate">Date and time that the specified file or directory was last written to</param>
+            <param name="rDate">Date and time that the specified file or directory was last access to.</param>
+            <returns>A leaf-node MIME part that contains an attachment.</returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.EmailSender.SendEmailAsync(MHZNet.PO.Core.Message.Email.EmailAccount,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sends an email
+            </summary>
+            <param name="emailAccount">Email account to use</param>
+            <param name="subject">Subject</param>
+            <param name="body">Body</param>
+            <param name="fromAddress">From address</param>
+            <param name="fromName">From display name</param>
+            <param name="toAddress">To address</param>
+            <param name="toName">To display name</param>
+            <param name="replyToAddress">ReplyTo address</param>
+            <param name="replyToName">ReplyTo display name</param>
+            <param name="bcc">BCC addresses list</param>
+            <param name="cc">CC addresses list</param>
+            <param name="attachmentFilePath">Attachment file path</param>
+            <param name="attachmentFileName">Attachment file name. If specified, then this file name will be sent to a recipient. Otherwise, "AttachmentFilePath" name will be used.</param>
+            <param name="attachedDownloadId">Attachment download ID (another attachment)</param>
+            <param name="headers">Headers</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="T:MHZNet.Business.Message.Email.SmtpBuilder">
+            <summary>
+            SMTP构造
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.SmtpBuilder.#ctor(MHZNet.IBusiness.Message.Email.IEmailAccountService,MHZNet.IBusiness.System.ISettingService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="emailAccountService"></param>
+            <param name="settingService"></param>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.SmtpBuilder.BuildAsync(MHZNet.PO.Core.Message.Email.EmailAccount)">
+            <summary>
+            Create a new SMTP client for a specific email account
+            </summary>
+            <param name="emailAccount">Email account to use. If null, then would be used EmailAccount by default</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the an SMTP client that can be used to send email messages
+            </returns>
+        </member>
+        <member name="M:MHZNet.Business.Message.Email.SmtpBuilder.ValidateServerCertificate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            Validates the remote Secure Sockets Layer (SSL) certificate used for authentication.
+            </summary>
+            <param name="sender">An object that contains state information for this validation.</param>
+            <param name="certificate">The certificate used to authenticate the remote party.</param>
+            <param name="chain">The chain of certificate authorities associated with the remote certificate.</param>
+            <param name="sslPolicyErrors">One or more errors associated with the remote certificate.</param>
+            <returns>A System.Boolean value that determines whether the specified certificate is accepted for authentication</returns>
+        </member>
+        <member name="T:MHZNet.Business.Monitor.AuditInfoService">
+            <summary>
+            审计日志服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.AuditInfoService.CreateAsync(MHZNet.PO.Logs.AuditLog)">
+            <summary>
+            创建
+            </summary>
+            <param name="auditLog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.AuditInfoService.CreateListAsync(System.Collections.Generic.List{MHZNet.PO.Logs.AuditLog})">
+            <summary>
+            批量创建
+            </summary>
+            <param name="auditLogs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.AuditInfoService.QueryAsync(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="logQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.AuditInfoService.QueryByCurrentAsync(MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询当前用户
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Monitor.ExceptionLogService">
+            <summary>
+            系统日志服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.ExceptionLogService.CreateAsync(MHZNet.PO.Logs.ExceptionLog)">
+            <summary>
+            创建
+            </summary>
+            <param name="exceptionLog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.ExceptionLogService.QueryAsync(MHZNet.DTO.Queries.System.LogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="logQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Monitor.OnlineUserService">
+            <summary>
+            在线用户服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.OnlineUserService.#ctor(MHZNet.Core.Caches.ICache,MHZNet.IBusiness.System.ITokenBlacklistService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cache"></param>
+            <param name="tokenBlacklistService"></param>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.OnlineUserService.QueryAsync(MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.OnlineUserService.DropOutAsync(System.Collections.Generic.HashSet{System.String})">
+            <summary>
+            强退
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.OnlineUserService.DownloadAsync">
+            <summary>
+            下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Monitor.ServerResourcesService">
+            <summary>
+            ��������Դ����
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Monitor.ServerResourcesService.Query">
+            <summary>
+            ��ѯ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.ApisService">
+            <summary>
+            Api路由服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateApisDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateApisDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateApisDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.QueryAsync(MHZNet.DTO.Queries.Permission.ApisQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="apisQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.QueryAllAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.ApisService.CreateAsync(System.Collections.Generic.List{MHZNet.PO.Core.Permission.Apis})">
+            <summary>
+            批量创建
+            </summary>
+            <param name="apis"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.DataScopeService">
+            <summary>
+            鏁版嵁鏉冮檺鏈嶅姟
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DataScopeService.#ctor(SqlSugar.ISqlSugarClient)">
+            <summary>
+            
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DataScopeService.GetDataScopeAccountsAsync(System.Int64)">
+            <summary>
+            鑾峰彇鐢ㄦ埛鎵€鏈夎鑹插叧鑱旂殑閮ㄩ棬ID
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.DepartmentService">
+            <summary>
+            閮ㄩ棬鏈嶅姟
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
+            <summary>
+            鍒涘缓
+            </summary>
+            <param name="createUpdateDepartmentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateDepartmentDto)">
+            <summary>
+            鏇存柊
+            </summary>
+            <param name="createUpdateDepartmentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.DeleteAsync(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            鍒犻櫎
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.QueryAsync(MHZNet.DTO.Queries.Permission.DeptQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ヨ
+            </summary>
+            <param name="deptQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.QueryAllAsync">
+            <summary>
+            鏌ヨ鍏ㄩ儴
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.DownloadAsync(MHZNet.DTO.Queries.Permission.DeptQueryCriteria)">
+            <summary>
+            涓嬭浇
+            </summary>
+            <param name="deptQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.QuerySuperiorDeptAsync(System.Int64)">
+            <summary>
+            鏌ヨ鍚岀骇鍜岀埗绾?    /// </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.QueryByPIdAsync(System.Int64)">
+            <summary>
+            鏌ヨ
+            </summary>
+            <param name="id">閮ㄩ棬鐖禝d</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.QueryByIdAsync(System.Int64)">
+            <summary>
+            鏌ヨ
+            </summary>
+            <param name="id">閮ㄩ棬ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.FindByPIdIsNullAsync">
+            <summary>
+            鑾峰彇椤剁骇閮ㄩ棬
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.FindSuperiorAsync(MHZNet.VO.Core.Permission.Department.DepartmentVo,System.Collections.Generic.List{MHZNet.VO.Core.Permission.Department.DepartmentVo})">
+            <summary>
+            鏌ユ壘鍚岀骇鍜屾墍鏈変笂绾ч儴闂?    /// </summary>
+            <param name="departmentVo"></param>
+            <param name="departmentVoList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.DepartmentService.GetChildIds(System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.Int64})">
+            <summary>
+            鑾峰彇鎵€閫夐儴闂ㄥ強鍏ㄩ儴涓嬬骇閮ㄩ棬ID
+            </summary>
+            <param name="ids"></param>
+            <param name="allIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.JobService">
+            <summary>
+            岗位服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateJobDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateJobDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateJobDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.QueryAsync(MHZNet.DTO.Queries.Permission.JobQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="jobQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.DownloadAsync(MHZNet.DTO.Queries.Permission.JobQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="jobQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.JobService.QueryAllAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.MenuService">
+            <summary>
+            菜单服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
+            <summary>
+            新增菜单
+            </summary>
+            <param name="createUpdateMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.CreateUpdateMenuDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.QueryAsync(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
+            <summary>
+            查询
+            </summary>
+            <param name="menuQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.DownloadAsync(MHZNet.DTO.Queries.Permission.MenuQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="menuQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.QueryAllAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.BuildTreeAsync(System.Int64)">
+            <summary>
+            构建前端路由菜单
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.FindSuperiorAsync(System.Int64)">
+            <summary>
+            查询同级与父级菜�?    /// </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.BuildAsync(System.Collections.Generic.List{MHZNet.VO.Core.Permission.Menu.MenuVo})">
+            <summary>
+            构建前端路由菜单
+            </summary>
+            <param name="menuList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.FindByPIdAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="pid">父Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.GetParentIdsAsync(MHZNet.PO.Core.Permission.Menu,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            查询
+            </summary>
+            <param name="m"></param>
+            <param name="parentIds">父id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.FindChildIdsAsync(System.Collections.Generic.List{MHZNet.PO.Core.Permission.Menu},System.Collections.Generic.List{System.Int64})">
+            <summary>
+            获取所有下级菜�?    /// </summary>
+            <param name="menuList"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.MenuService.FindChildAsync(System.Int64)">
+            <summary>
+            查询子级
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.OnlineUserService">
+            <summary>
+            鍦ㄧ嚎鐢ㄦ埛service
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.OnlineUserService.#ctor(Shyjus.BrowserDetection.IBrowserDetector,IP2Region.Net.Abstractions.ISearcher)">
+            <summary>
+            
+            </summary>
+            <param name="browserDetector"></param>
+            <param name="searcher"></param>
+        </member>
+        <member name="M:MHZNet.Business.Permission.OnlineUserService.SaveLoginUserAsync(MHZNet.VO.Jwt.JwtUserVo,System.String)">
+            <summary>
+            淇濆瓨鍦ㄧ嚎鐢ㄦ埛
+            </summary>
+            <param name="jwtUserVo"></param>
+            <param name="remoteIp"></param>
+        </member>
+        <member name="M:MHZNet.Business.Permission.OnlineUserService.CreateJwtUserAsync(MHZNet.VO.Core.Permission.User.UserVo,System.Collections.Generic.List{System.String})">
+            <summary>
+            鍒涘缓Jwt瀵硅薄
+            </summary>
+            <param name="userVo"></param>
+            <param name="permissionRoles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.PermissionService">
+            <summary>
+            权限服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.PermissionService.GetPermissionIdentifierAsync(System.Int64)">
+            <summary>
+            获取权限标识符
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.PermissionService.GetUrlAccessControlAsync(System.Int64)">
+            <summary>
+            获取权限urls
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.RoleService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateRoleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.Role.CreateUpdateRoleDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateRoleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.QueryAsync(MHZNet.DTO.Queries.Permission.RoleQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="roleQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.DownloadAsync(MHZNet.DTO.Queries.Permission.RoleQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="roleQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.QueryAllAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.QueryUserRoleLevelAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            查询角色等级
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.VerificationUserRoleLevelAsync(System.Nullable{System.Int32})">
+            <summary>
+            验证用户角色等级
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+            <exception cref="T:MHZNet.Common.Exception.BadRequestException"></exception>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.UpdateRolesMenusAsync(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleMenuDto)">
+            <summary>
+            更新角色菜单
+            </summary>
+            <param name="updateRoleMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.RoleService.UpdateRolesApisAsync(MHZNet.DTO.Dto.Core.Permission.Role.UpdateRoleApiDto)">
+            <summary>
+            更新角色Api路由
+            </summary>
+            <param name="updateRoleApiDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Permission.UserService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.#ctor(MHZNet.IBusiness.Permission.IDepartmentService,MHZNet.IBusiness.Permission.IRoleService)">
+            <summary>
+            
+            </summary>
+            <param name="departmentService"></param>
+            <param name="roleService"></param>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.CreateAsync(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateUserDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.UpdateAsync(MHZNet.DTO.Dto.Core.Permission.User.CreateUpdateUserDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateUserDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.QueryAsync(MHZNet.DTO.Queries.Permission.UserQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="userQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.DownloadAsync(MHZNet.DTO.Queries.Permission.UserQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="userQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.QueryByIdAsync(System.Int64)">
+            <summary>
+            查询
+            </summary>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:MHZNet.Business.Permission.UserService.QueryByNameAsync(System.String)" -->
+        <member name="M:MHZNet.Business.Permission.UserService.QueryByDeptIdsAsync(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            根据部门ID查找用户
+            </summary>
+            <param name="deptIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.UpdateCenterAsync(MHZNet.DTO.Dto.Core.Permission.User.UpdateUserCenterDto)">
+            <summary>
+            更新用户公共信息
+            </summary>
+            <param name="updateUserCenterDto"></param>
+            <returns></returns>
+            <exception cref="T:MHZNet.Common.Exception.BadRequestException"></exception>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.UpdatePasswordAsync(MHZNet.DTO.Dto.Core.Permission.User.UpdateUserPassDto)">
+            <summary>
+            更新用户密码
+            </summary>
+            <param name="userPassDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.UpdateEmailAsync(MHZNet.DTO.Dto.Core.Permission.User.UpdateUserEmailDto)">
+            <summary>
+            修改邮箱
+            </summary>
+            <param name="updateUserEmailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Permission.UserService.UpdateAvatarAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            更新用户头像
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.Queued.QueuedEmailService">
+            <summary>
+            閭欢闃熷垪鎺ュ彛瀹炵幇
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.#ctor(MHZNet.IBusiness.Message.Email.IEmailMessageTemplateService,MHZNet.IBusiness.Message.Email.IEmailAccountService,MHZNet.IBusiness.Message.Email.IEmailSender,Microsoft.Extensions.Logging.ILogger{MHZNet.Business.Queued.QueuedEmailService})">
+            <summary>
+            
+            </summary>
+            <param name="emailMessageTemplateService"></param>
+            <param name="emailAccountService"></param>
+            <param name="emailSender"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.CreateAsync(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
+            <summary>
+            鏂板
+            </summary>
+            <param name="createUpdateQueuedEmailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.UpdateTriesAsync(MHZNet.PO.Core.Queued.QueuedEmail)">
+            <summary>
+            鏇存柊
+            </summary>
+            <param name="queuedEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.UpdateAsync(MHZNet.DTO.Dto.Core.Queued.CreateUpdateQueuedEmailDto)">
+            <summary>
+            鏇存柊
+            </summary>
+            <param name="createUpdateQueuedEmailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            鍒犻櫎
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.QueryAsync(MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ヨ
+            </summary>
+            <param name="queuedEmailQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.ResetEmail(System.String,System.String)">
+            <summary>
+            鍙樻洿閭楠岃瘉鐮?    /// </summary>
+            <param name="emailAddress"></param>
+            <param name="messageTemplateName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.Queued.QueuedEmailService.QueryToSendMailAsync(MHZNet.DTO.Queries.Queued.QueuedEmailQueryCriteria)">
+            <summary>
+            鏌ヨ 鍙戦€侀偖浠?    /// </summary>
+            <param name="queuedEmailQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.AppSecretService">
+            <summary>
+            App应用秘钥
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.AppSecretService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateAppSecretDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.AppSecretService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateAppSecretDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateAppSecretDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.AppSecretService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.AppSecretService.QueryAsync(MHZNet.DTO.Queries.System.AppsecretQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="appsecretQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.AppSecretService.DownloadAsync(MHZNet.DTO.Queries.System.AppsecretQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="appsecretQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.DictDetailService">
+            <summary>
+            字典详情服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.DictDetailService.CreateAsync(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateDictDetailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictDetailService.UpdateAsync(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDetailDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateDictDetailDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictDetailService.DeleteAsync(System.Int64)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictDetailService.GetDetailByDictIdAsync(System.Int64)">
+            <summary>
+            获取字典详情
+            </summary>
+            <param name="dictId">字典ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictDetailService.QueryAsync(MHZNet.DTO.Queries.System.DictDetailQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="dictDetailQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.DictService">
+            <summary>
+            字典服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.DictService.CreateAsync(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateDictDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictService.UpdateAsync(MHZNet.DTO.Dto.Core.System.Dict.CreateUpdateDictDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateDictDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictService.QueryAsync(MHZNet.DTO.Queries.System.DictQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="dictQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.DictService.DownloadAsync(MHZNet.DTO.Queries.System.DictQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="dictQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.FileRecordService">
+            <summary>
+            文件记录服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.FileRecordService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateFileRecordDto"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.FileRecordService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateFileRecordDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateFileRecordDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.FileRecordService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.FileRecordService.QueryAsync(MHZNet.DTO.Queries.System.FileRecordQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="fileRecordQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.FileRecordService.DownloadAsync(MHZNet.DTO.Queries.System.FileRecordQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="fileRecordQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.QuartzNetLogService">
+            <summary>
+            QuartzNet作业日志服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetLogService.CreateAsync(MHZNet.PO.Core.System.QuartzNet.QuartzNetLog)">
+            <summary>
+            创建
+            </summary>
+            <param name="quartzNetLog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetLogService.QueryAsync(MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="quartzNetLogQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetLogService.DownloadAsync(MHZNet.DTO.Queries.System.QuartzNetLogQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="quartzNetLogQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.QuartzNetService">
+            <summary>
+            QuartzNet浣滀笟鏈嶅姟
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.#ctor(MHZNet.IBusiness.System.IQuartzNetLogService)">
+            <summary>
+            
+            </summary>
+            <param name="quartzNetLogService"></param>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.QueryAllAsync">
+            <summary>
+            鏌ヨ鍏ㄩ儴
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
+            <summary>
+            鍒涘缓
+            </summary>
+            <param name="createUpdateQuartzNetDto"></param>
+            <returns></returns>
+            <exception cref="T:MHZNet.Common.Exception.BadRequestException"></exception>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateQuartzNetDto)">
+            <summary>
+            鏇存柊
+            </summary>
+            <param name="createUpdateQuartzNetDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.UpdateJobInfoAsync(MHZNet.PO.Core.System.QuartzNet.QuartzNet,MHZNet.PO.Core.System.QuartzNet.QuartzNetLog)">
+            <summary>
+            鏇存柊浣滀笟
+            </summary>
+            <param name="quartzNet"></param>
+            <param name="quartzNetLog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.DeleteAsync(System.Collections.Generic.List{MHZNet.PO.Core.System.QuartzNet.QuartzNet})">
+            <summary>
+            鍒犻櫎
+            </summary>
+            <param name="quartzNets"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.QueryAsync(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            鏌ヨ
+            </summary>
+            <param name="quartzNetQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.QuartzNetService.DownloadAsync(MHZNet.DTO.Queries.System.QuartzNetQueryCriteria)">
+            <summary>
+            涓嬭浇
+            </summary>
+            <param name="quartzNetQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.SettingService">
+            <summary>
+            全局设置服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateSettingDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateSettingDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateSettingDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.QueryAsync(MHZNet.DTO.Queries.System.SettingQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="settingQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.DownloadAsync(MHZNet.DTO.Queries.System.SettingQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="settingQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.GetSettingValue``1(System.String)">
+            <summary>
+            获取设置 �?    /// </summary>
+            <param name="settingName"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.SettingService.ConvertValue(System.Type,System.String)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.TenantService">
+            <summary>
+            租户服务
+            </summary>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.CreateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="createUpdateTenantDtoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.UpdateAsync(MHZNet.DTO.Dto.Core.System.CreateUpdateTenantDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="createUpdateTenantDtoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.DeleteAsync(System.Collections.Generic.HashSet{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.QueryAsync(MHZNet.DTO.Queries.System.TenantQueryCriteria,MHZNet.DTO.Queries.Common.Pagination)">
+            <summary>
+            查询
+            </summary>
+            <param name="tenantQueryCriteria"></param>
+            <param name="pagination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.QueryAllAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MHZNet.Business.System.TenantService.DownloadAsync(MHZNet.DTO.Queries.System.TenantQueryCriteria)">
+            <summary>
+            下载
+            </summary>
+            <param name="tenantQueryCriteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MHZNet.Business.System.TokenBlacklistService">
+            <summary>
+            Token黑名单
+            </summary>
+        </member>
+        <member name="T:MHZNet.Business.Test.TestOrderService">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
