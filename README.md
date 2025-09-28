@@ -4,12 +4,6 @@
 - 无业务逻辑代码入侵，适用于任何 .NET/C# 应用程序。
 - MHZNet 是一个现代化的企业级后台管理系统
 - 采用 DTO/VO/PO 架构模式，提供清晰的数据层次结构
-
-#### 💒代码仓库
-- GitHub: <a href="https://github.com/mhzch/MHZNet-Admin" target="_blank">https://github.com/mhzch/MHZNet-Admin</a>
-
-
-
 #### ⚙️模块说明
 
 | # | 模块功能                      |  项目文件                    | 说明|
@@ -63,13 +57,3 @@
 1. 下载项目，编译无误。然后启动`MHZNet.Api`
 2. 系统便会自动创建数据库表并初始化相关基础数据
 3. 系统默认使用`Sqlite`数据库与`DistributedCache`缓存
-
-
-#### ⭐️支持项目
-如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/mhzch/MHZNet-Admin">Github</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持。
-
-#### 🤝致谢
-感谢所有为开源社区做出贡献的开发者们。
-
-#### 💡说明
-MHZNet 是一个现代化的企业级后台管理系统，采用 DTO/VO/PO 架构模式，提供清晰的数据层次结构。
